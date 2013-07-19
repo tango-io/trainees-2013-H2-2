@@ -29,14 +29,16 @@
 
 .main-container.row
   %article.large-9.columns
-    %iframe
-    %p Here goes the video
-    %a{:href => "#"} Project name
-    %p
-      by Creator
-      %a{:href => "#"} City
-    %p
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    %h3 Selected category
+    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "250", :src => "//www.youtube.com/embed/_OT0-GQ2SaA?list=UUPV33YGEVLwtOotz9ZG0XQw", :width => "340"}
+    .article-content  
+      %p Here goes the video
+      %a{:href => "#"} Project name
+      %p
+        by Creator
+        %a{:href => "#"} City
+      %p
+        "Lorem ipsum dolor sit amet. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   
   %aside.side-bar.large-3.columns
     %ul.side-bar-nav
