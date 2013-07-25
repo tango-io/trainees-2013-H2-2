@@ -1,0 +1,18 @@
+= render "header"
+%hr
+.discover-title.row
+  .large-11.columns
+    %h3 Discover / Category
+.main-container.row    
+  .project-container.large-9.colums
+    %section.cuerpo
+      %table#projects
+        %thead
+        %tbody.page
+          .project1
+            = render  @projects
+         
+      = link_to "New" , {:action => 'new'}
+      = paginate @projects
+
+
