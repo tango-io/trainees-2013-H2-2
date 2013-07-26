@@ -18,4 +18,4 @@
 //= require jquery.infinitescroll
 
 $(function(){ $(document).foundation(); });
-
+$('.left-column-content .active').hide()
