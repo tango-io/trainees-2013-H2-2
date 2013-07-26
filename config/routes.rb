@@ -1,15 +1,16 @@
 Trainees2013H22::Application.routes.draw do
+  
+    
+  # Make sure this routeset is defined last
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
    root 'kickstarter#index'
-<<<<<<< HEAD
-   resources :discoveries
-=======
+
    resources :projects
- 
->>>>>>> a08c9f54f8429f6be741792e829548829fe85460
+   ComfortableMexicanSofa::Routing.admin(:path => '/cms-admin')
+   ComfortableMexicanSofa::Routing.content(:path => '/', :sitemap => false)
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

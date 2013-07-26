@@ -22,7 +22,10 @@
 
   <body>
 
+    <%= render :partial => 'layouts/header', :formats=>[:html], :handlers=>[:haml] %>
     <%= yield %>
+    <%= render :partial => 'layouts/footer', :formats=>[:html], :handlers=>[:haml] %>
+
 
     
     <%= javascript_include_tag "application" %>
