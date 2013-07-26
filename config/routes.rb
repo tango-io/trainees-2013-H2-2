@@ -4,7 +4,12 @@ Trainees2013H22::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'kickstarter#index'
+<<<<<<< HEAD
    resources :discoveries
+=======
+   resources :projects
+ 
+>>>>>>> a08c9f54f8429f6be741792e829548829fe85460
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
