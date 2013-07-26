@@ -2,17 +2,67 @@
 %hr
 .discover-title.row
   .large-11.columns
-    %h3 Discover / Category
+    %h4 Discover / Porjects
+    %p Staff Picks collects projects we like, and think you will too. They’re creative, inspiring, and fun.    
+
 .main-container.row    
+  .menu-discover-projects.large-3.colums
+    %br
+    %a{:href => "#"} > Video mode
+    %br
+    %br 
+    %ul 
+      %strong Featured
+      %li StaffPick 
+      %li Popular
+      %li Recently Launched
+      %li Ending Soon
+      %li Small Projects 
+      %li Most funded 
+      %li Curated Pages
+      %br
+      %strong Categories
+      %li Art
+      %li Comic 
+      %li Dance
+      %li Design
+      %li Fashion
+      %li Film & Video
+      %li Food
+      %li Games
+      %li Music
+      %li Photography
+      %li Publishing
+      %br
+      %strong #Tags
+      %li Arctic
+      %li Bikes
+      %li Burning
+      %li Cats
+      %li Civic
+      %li Citulhu
+      %li Library
+      %li Maps
+      %li Open Source
+      %li Robots
+      %li RPG
+      %br
+      %Strong Cities
+      %li New York
+      %li Los Angeles
+      %li Mexico
+      %li Guadalajara
+      %li Monterrey
+
   .project-container.large-9.colums
     %section.cuerpo
       %table#projects
         %thead
         %tbody.page
-          .project1
-            = render  @projects
-         
-      = link_to "New" , {:action => 'new'}
-      = paginate @projects
+          = render @projects
+  = paginate @projects
+= link_to "New" , {:action => 'new'}
+        
+
 
 
