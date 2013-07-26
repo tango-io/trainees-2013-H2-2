@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'haml'
 
 gem 'zurb-foundation'
+
+gem 'comfortable_mexican_sofa', '~> 1.9.0'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
