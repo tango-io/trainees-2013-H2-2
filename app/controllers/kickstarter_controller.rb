@@ -1,4 +1,0 @@
-class KickstarterController < ApplicationController
-
-
-end
