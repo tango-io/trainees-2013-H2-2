@@ -1,0 +1,2 @@
+module KickstarterHelper
+end

@@ -1,0 +1,79 @@
+%header.row.header
+  .logo.large-3.columns{:id => 'logo', "data-mercury" => "simple"}
+    %h5 Your logo goes here
+  .about.large-1.columns
+    %a{:href => "#"}
+      %span What is kickstarter?
+  .discover.large-1.menu.columns
+    %a{:href => "#"} Discover
+  .start.large-1.menu.columns
+    %a{:href => "#"} Start
+  .search-box.large-3.columns
+    %input{:type => "search", :value => "Search projects"} 
+  .help.style.large-1.columns
+    %a{:href => "#"} Help
+  .signup.style.large-1.columns
+    %a{:href => "#"} Sing up
+  .login.style.large-1.columns
+    %a{:href => "#"} Log in
+
+%section.tittle-project
+  %h3
+    = raw @project.name
+  %h5
+    by
+    = raw @project.autor 
+
+.project.row
+  .submenu.large-12.columns
+    %ul
+      %li home
+      %li 
+        Updates 
+        %a{:href => "#"} 3
+      %li 
+        Backers
+        %a{:href => "#"} 2
+      %li 
+        Comments 
+        %a{:href => "#"} 2
+%br
+%section.row.show-project
+  .content-project.large-8.columns
+    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "//www.youtube.com/embed/_OT0-GQ2SaA?list=UUPV33YGEVLwtOotz9ZG0XQw", :width => "640"}
+    %h5
+      1.-
+      = raw @project.description
+    %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. 
+    %img{:src => "/assets/proyecto1.jpg"}
+    %h5
+      2.-
+      = raw @project.description
+    %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. 
+    %h5
+      3.- In Patronic tuas voluntuas
+    %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. 
+    %img{:src => "/assets/proyectos.jpg"}
+    %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. 
+
+  .dates-project.large-3.columns
+    %h3 291
+    %p backers
+    %h3 $716,129
+    pledged of $ 
+    = raw @project.goal
+    goal
+    %h3 7 
+    days to go
+    %br
+    %br
+    .btn-back.small.button
+      %p Back this project $1 minimum pledge
+    %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
+    %p.funding-period Jul 19, 2013 - Aug 23, 2013
+%br
+%br
+
+
+.down
+  %h1 Here goes the site map
