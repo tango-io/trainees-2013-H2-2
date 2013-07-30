@@ -1063,3 +1063,1011 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-30 10:56:40
 
 Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-30 10:56:40 -0500
 >>>>>>> 46a670b87c6f9ccc3cdf4d09da8bb49176b20491
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 13:19:45 -0500
+
+RuntimeError (Could not load database configuration. No such file - /home/elherzt/kickstarter/trainees-2013-H2-2/config/database.yml):
+  railties (4.0.0) lib/rails/application/configuration.rb:110:in `database_configuration'
+  activerecord (4.0.0) lib/active_record/railtie.rb:174:in `block (2 levels) in <class:Railtie>'
+  activesupport (4.0.0) lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+  activesupport (4.0.0) lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+  activesupport (4.0.0) lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+  activesupport (4.0.0) lib/active_support/lazy_load_hooks.rb:44:in `each'
+  activesupport (4.0.0) lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+  activerecord (4.0.0) lib/active_record/base.rb:322:in `<module:ActiveRecord>'
+  activerecord (4.0.0) lib/active_record/base.rb:22:in `<top (required)>'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:228:in `require'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:228:in `block in require'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:213:in `load_dependency'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:228:in `require'
+  activerecord (4.0.0) lib/active_record/schema_migration.rb:3:in `<top (required)>'
+  activerecord (4.0.0) lib/active_record/migration.rb:783:in `schema_migrations_table_name'
+  activerecord (4.0.0) lib/active_record/migration.rb:791:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__792400482368406943__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 13:24:47 -0500
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__792400482368406943__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+  [1m[36m (164.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (144.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePages (20130730153957)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "pages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255), "style" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730153957"]]
+  [1m[36m (145.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProjects (20130730154958)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "author" varchar(255), "description" varchar(255), "content" varchar(255), "image" varchar(255), "video" varchar(255), "goal" float, "period" integer, "coments" varchar(255), "categories" varchar(255), "tags" varchar(255), "faqs" varchar(255), "backers" varchar(255), "pledge" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730154958"]]
+  [1m[36m (170.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 119ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-30 13:25:46 -0500
+
+
+Started GET "/pages/new" for 127.0.0.1 at 2013-07-30 13:30:23 -0500
+Processing by PagesController#new as HTML
+  Rendered pages/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-30 13:30:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20130730193830)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730193830"]]
+  [1m[36m (185.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSubcategories (20130730193843)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "subcategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" varchar(255), "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730193843"]]
+  [1m[36m (180.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePledges (20130730193858)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "pledges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" varchar(255), "name" varchar(255), "description" varchar(255), "amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730193858"]]
+  [1m[36m (175.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20130730193912)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" varchar(255), "user_id" varchar(255), "comment" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730193912"]]
+  [1m[36m (171.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBackers (20130730194047)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "backers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar(255), "project_id" varchar(255), "amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730194047"]]
+  [1m[36m (171.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCities (20130730194103)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "cities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "total" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730194103"]]
+  [1m[36m (161.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (47.8ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 30 Jul 2013 20:02:15 UTC +00:00], ["name", "Art"], ["updated_at", Tue, 30 Jul 2013 20:02:15 UTC +00:00]]
+  [1m[36m (219.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 1], ["created_at", Tue, 30 Jul 2013 20:04:12 UTC +00:00], ["name", "Digital Art"], ["updated_at", Tue, 30 Jul 2013 20:04:12 UTC +00:00]]
+  [1m[35m (194.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "pledges" ("amount", "created_at", "description", "name", "project_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["amount", 10.0], ["created_at", Tue, 30 Jul 2013 20:05:52 UTC +00:00], ["description", "A beautiful hat"], ["name", "hat"], ["project_id", 1], ["updated_at", Tue, 30 Jul 2013 20:05:52 UTC +00:00]]
+  [1m[36m (414.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "cities" ("created_at", "name", "total", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 30 Jul 2013 20:06:53 UTC +00:00], ["name", "New York"], ["total", 1], ["updated_at", Tue, 30 Jul 2013 20:06:53 UTC +00:00]]
+  [1m[35m (185.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "backers" ("amount", "created_at", "project_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["amount", 20.0], ["created_at", Tue, 30 Jul 2013 20:09:32 UTC +00:00], ["project_id", 1], ["updated_at", Tue, 30 Jul 2013 20:09:32 UTC +00:00], ["user_id", 1]]
+  [1m[36m (220.3ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (9.7ms)[0m  [1mINSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 2], ["created_at", Tue, 30 Jul 2013 20:30:28 UTC +00:00], ["name", "modern art"], ["updated_at", Tue, 30 Jul 2013 20:30:28 UTC +00:00]]
+  [1m[35m (197.1ms)[0m  commit transaction
+  [1m[36mSubcategory Load (0.4ms)[0m  [1mSELECT "subcategories".* FROM "subcategories"[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 30 Jul 2013 20:42:05 UTC +00:00], ["name", "Music"], ["updated_at", Tue, 30 Jul 2013 20:42:05 UTC +00:00]]
+  [1m[36m (189.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 5], ["created_at", Tue, 30 Jul 2013 20:43:04 UTC +00:00], ["name", "mexican music"], ["updated_at", Tue, 30 Jul 2013 20:43:04 UTC +00:00]]
+  [1m[35m (189.6ms)[0m  commit transaction
+  [1m[36mSubcategory Load (0.5ms)[0m  [1mSELECT "subcategories".* FROM "subcategories"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (34.0ms)[0m  INSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 7], ["created_at", Tue, 30 Jul 2013 20:45:36 UTC +00:00], ["name", "Dance"], ["updated_at", Tue, 30 Jul 2013 20:45:36 UTC +00:00]]
+  [1m[36m (188.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mSubcategory Load (0.4ms)[0m  SELECT "subcategories".* FROM "subcategories"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (33.2ms)[0m  INSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 8], ["created_at", Tue, 30 Jul 2013 20:56:46 UTC +00:00], ["name", "Etnic"], ["updated_at", Tue, 30 Jul 2013 20:56:46 UTC +00:00]]
+  [1m[36m (208.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mSubcategory Load (0.4ms)[0m  SELECT "subcategories".* FROM "subcategories"
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories"[0m
+  [1m[35mSubcategory Load (0.4ms)[0m  SELECT "subcategories".* FROM "subcategories"
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 1], ["created_at", Tue, 30 Jul 2013 21:36:47 UTC +00:00], ["name", "subcategory 1"], ["updated_at", Tue, 30 Jul 2013 21:36:47 UTC +00:00]]
+  [1m[36m (190.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mSubcategory Load (0.4ms)[0m  SELECT "subcategories".* FROM "subcategories"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mSQL (163.7ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = 1[0m
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT "subcategories".* FROM "subcategories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 30 Jul 2013 21:46:51 UTC +00:00], ["name", "Category 3"], ["updated_at", Tue, 30 Jul 2013 21:46:51 UTC +00:00]]
+  [1m[36m (199.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 30 Jul 2013 21:47:38 UTC +00:00], ["name", "Category 4"], ["updated_at", Tue, 30 Jul 2013 21:47:38 UTC +00:00]]
+  [1m[35m (192.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 30 Jul 2013 21:47:53 UTC +00:00], ["name", "Category 5"], ["updated_at", Tue, 30 Jul 2013 21:47:53 UTC +00:00]]
+  [1m[36m (186.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (184.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = 5[0m
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT "subcategories".* FROM "subcategories"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories"[0m
+  [1m[35mSQL (177.5ms)[0m  DELETE FROM "subcategories"
+  [1m[36mSubcategory Load (0.4ms)[0m  [1mSELECT "subcategories".* FROM "subcategories"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (27.9ms)[0m  [1mINSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 4], ["created_at", Tue, 30 Jul 2013 21:59:13 UTC +00:00], ["name", "Modern Art"], ["updated_at", Tue, 30 Jul 2013 21:59:13 UTC +00:00]]
+  [1m[35m (200.7ms)[0m  commit transaction
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 5], ["created_at", Tue, 30 Jul 2013 21:59:58 UTC +00:00], ["name", "Modern Art22"], ["updated_at", Tue, 30 Jul 2013 21:59:58 UTC +00:00]]
+  [1m[35m (214.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "subcategories" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 8], ["created_at", Tue, 30 Jul 2013 22:01:23 UTC +00:00], ["name", "algo"], ["updated_at", Tue, 30 Jul 2013 22:01:23 UTC +00:00]]
+  [1m[36m (207.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:30:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/home/elherzt/kickstarter/trainees-2013-H2-2/app/controllers/projects_controller.rb:3: syntax error, unexpected '=', expecting ']'
+    @category = Category.find(params[:id = 1]);
+                                          ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1329893126104165227__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.7ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:30:57 -0500
+
+SyntaxError (/home/elherzt/kickstarter/trainees-2013-H2-2/app/controllers/projects_controller.rb:3: syntax error, unexpected '=', expecting ']'
+    @category = Category.find(params[:id = 1])
+                                          ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1329893126104165227__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:31:01 -0500
+
+SyntaxError (/home/elherzt/kickstarter/trainees-2013-H2-2/app/controllers/projects_controller.rb:3: syntax error, unexpected '=', expecting ']'
+    @category = Category.find(params[:id = 1])
+                                          ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1329893126104165227__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:31:25 -0500
+Processing by ProjectsController#index as HTML
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Category without an ID):
+  app/controllers/projects_controller.rb:3:in `index'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:31:51 -0500
+Processing by ProjectsController#index as HTML
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Category without an ID):
+  app/controllers/projects_controller.rb:3:in `index'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:32:04 -0500
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    33:       -#=f.text_field :video
+    34: 
+    35: %h1 Hola
+    36:   = raw @category.name
+  app/views/projects/index.html.haml:36
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-30 17:32:24 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:32:47 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered projects/index.html.haml within layouts/application (50.2ms)
+Completed 500 Internal Server Error in 54ms
+
+ActionView::Template::Error (undefined method `id' for #<ActiveRecord::Relation::ActiveRecord_Relation_Category:0x007eff787c8e30>):
+    32:       -#=f.label :video
+    33:       -#=f.text_field :video
+    34: 
+    35: = raw @category.id
+  app/views/projects/index.html.haml:35:in `_app_views_projects_index_html_haml__3126602270729302396_69817851615380'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:34:23 -0500
+Processing by ProjectsController#index as HTML
+ERROR: compiling _app_views_projects_index_html_haml__3126602270729302396_23093940 RAISED /home/elherzt/kickstarter/trainees-2013-H2-2/app/views/projects/index.html.haml:35: syntax error, unexpected keyword_do_block
+/home/elherzt/kickstarter/trainees-2013-H2-2/app/views/projects/index.html.haml:38: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_projects_index_html_haml__3126602270729302396_23093940(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "projects/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+haml_temp =  @category.each |r| do
+_hamlout.push_text("#{_hamlout.format_script_false_false_false_true_false_true_false(( r.name
+));}\n", 0, false);end;_hamlout.buffer << _hamlout.format_script_false_false_false_true_false_false_false(haml_temp);_hamlout.push_text("\n", 0, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:403:in `_run__3059996620800269130__process_action__callbacks'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__1329893126104165227__call__callbacks'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered projects/index.html.haml within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (/home/elherzt/kickstarter/trainees-2013-H2-2/app/views/projects/index.html.haml:35: syntax error, unexpected keyword_do_block
+/home/elherzt/kickstarter/trainees-2013-H2-2/app/views/projects/index.html.haml:38: syntax error, unexpected keyword_ensure, expecting $end):
+    32:       -#=f.label :video
+    33:       -#=f.text_field :video
+    34: 
+    35: = @category.each |r| do
+    36:   = r.name
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__3059996620800269130__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1329893126104165227__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:40:05 -0500
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (80.0ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-30 17:40:06 -0500
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-07-30 17:40:09 -0500
+
+AbstractController::ActionNotFound (The action 'create' could not be found for ProjectsController):
+  actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1329893126104165227__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/elherzt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/elherzt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-30 17:42:21 -0500
