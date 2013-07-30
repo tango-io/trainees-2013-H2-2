@@ -11,7 +11,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130730154958) do
+ActiveRecord::Schema.define(version: 20130730194103) do
+
+  create_table "backers", force: true do |t|
+    t.string   "user_id"
+    t.string   "project_id"
+    t.float    "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.integer  "total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.string   "project_id"
+    t.string   "user_id"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", force: true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.string   "style"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pledges", force: true do |t|
+    t.string   "project_id"
+    t.string   "name"
+    t.string   "description"
+    t.float    "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -32,10 +78,9 @@ ActiveRecord::Schema.define(version: 20130730154958) do
     t.datetime "updated_at"
   end
 
-  create_table "pages", force: true do |t|
-    t.string   "title"
-    t.string   "content"
-    t.string   "style"
+  create_table "subcategories", force: true do |t|
+    t.string   "category_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
