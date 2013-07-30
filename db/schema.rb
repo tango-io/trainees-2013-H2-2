@@ -32,4 +32,12 @@ ActiveRecord::Schema.define(version: 20130730154958) do
     t.datetime "updated_at"
   end
 
+  create_table "pages", force: true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.string   "style"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
