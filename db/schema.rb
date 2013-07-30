@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20130730154958) do
 
+  create_table "pages", force: true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.string   "style"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "projects", force: true do |t|
     t.string   "name"
     t.string   "author"
@@ -28,14 +36,6 @@ ActiveRecord::Schema.define(version: 20130730154958) do
     t.string   "faqs"
     t.string   "backers"
     t.string   "pledge"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "pages", force: true do |t|
-    t.string   "title"
-    t.string   "content"
-    t.string   "style"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

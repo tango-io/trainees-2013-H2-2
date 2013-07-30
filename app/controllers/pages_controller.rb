@@ -1,12 +1,26 @@
 class PagesController < ApplicationController
 
+
     def index
 
     end
     def new 
 
+      @page = Page.new
+         
     end
     def create
+
+      @page = Page.new(page_params)
+      @page.save
+
+    end
+    def show
+      # create json for angular
+      @page = Page.find(params[:id])      
+      respond_to do |format|
+         format.json { render json: @page }
+      end
 
     end
     def edit
@@ -16,6 +30,12 @@ class PagesController < ApplicationController
 
     end
     def delete
+    end
+
+    private 
+
+    def page_params
+      params.require(:page).permit(:title, :content, :style)
     end
 
 
