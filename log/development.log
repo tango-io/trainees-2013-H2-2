@@ -7,3 +7,31 @@ Migrating to CreatePages (20130730153957)
   [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130730153957"]]
   [1m[36m (189.1ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/pages/new" for 127.0.0.1 at 2013-07-30 10:56:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#new as HTML
+  Rendered pages/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1487ms (Views: 1442.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-30 10:56:40 -0500
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-30 10:56:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-30 10:56:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-30 10:56:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-30 10:56:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-30 10:56:40 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-30 10:56:40 -0500
