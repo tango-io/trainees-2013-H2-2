@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
   def index
-    @category = Category.all
+    @categories = Category.all
+    respond_to do |format|
+      format.json { render json: @categories }
+      format.html { render html: @categories }
+    end
   end
 
 end

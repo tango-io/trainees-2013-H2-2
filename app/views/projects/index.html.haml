@@ -25,6 +25,7 @@
       =f.text_field :period
     %p 
       =f.label :category
-    %select{:name => 'category'}
-      %option{:value => '1'} Modern art
-   
+    %section(ng-controller="fillComboController" ng-init= "fillCombo()")
+      %select{:value => "Category", :name =>"category"}
+        %option(ng-repeat="category in categories"){:value => "{{category.id}}" } 
+          {{category.name}}
