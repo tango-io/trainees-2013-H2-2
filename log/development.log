@@ -10327,3 +10327,57 @@ Started GET "/projects.json" for 127.0.0.1 at 2013-07-31 14:27:39 -0500
 Processing by ProjectsController#index as JSON
   [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
 Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/angular/controllers/fillComboController.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/angular/controllers/showPageController.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/angular/controllers/pagesController.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+
+
+Started GET "/projects.json" for 127.0.0.1 at 2013-07-31 14:54:07 -0500
+Processing by ProjectsController#index as JSON
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
