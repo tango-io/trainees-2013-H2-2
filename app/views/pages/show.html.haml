@@ -1,0 +1,14 @@
+.content(ng-controller="showPageController" ng-init="showPage(#{@page.id})")
+  %p#notice= notice
+  %p
+    %strong Name:
+    {{page.title}}
+  %p
+    %strong Price:
+    {{page.content}}
+  %p
+    %strong Description:
+    {{page.style}}
+  = link_to 'Edit', edit_page_path(@page)
+  |
+  \#{link_to 'Back', pages_path}

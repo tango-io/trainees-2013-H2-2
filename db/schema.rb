@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20130730194103) do
     t.float    "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "projects", force: true do |t|
