@@ -1,0 +1,13 @@
+%h1 Pages
+%table(ng-controller="pagesController" ng-init="showPages()")
+  %thead
+    %tr
+      %th Title
+  %tbody(ng-repeat="page in pages")
+    %tr
+      %td {{page.title}}
+      %td
+        %a{href: "pages/{{page.id}}"} show
+      %td= link_to 'Edit', edit_page_path(@page)
+%br/
+= link_to 'New Page', new_page_path
