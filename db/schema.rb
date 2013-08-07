@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130807155408) do
+ActiveRecord::Schema.define(version: 20130807224619) do
 
   create_table "backers", force: true do |t|
     t.string   "user_id"
@@ -64,7 +64,6 @@ ActiveRecord::Schema.define(version: 20130807155408) do
     t.string   "author"
     t.string   "description"
     t.string   "content"
-    t.string   "image"
     t.string   "video"
     t.float    "goal"
     t.integer  "period"
