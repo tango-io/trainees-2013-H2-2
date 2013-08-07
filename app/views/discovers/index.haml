@@ -1,0 +1,16 @@
+%h1 Discovers
+.row 
+  .large-9.columns
+    %ul
+      - @projects_category.each do |project|
+        %li #{project.category.name}
+        %li #{project.name}
+        %li #{project.author}
+        %li #{project.description}
+        %li #{project.period}
+
+  %ul
+    %li
+      %h3 #{@categories.name}
+    - @subcategories.each do |subcategory|
+      %li #{subcategory.name}
