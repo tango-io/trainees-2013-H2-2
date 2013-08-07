@@ -1,22 +1,23 @@
-%header.row.header
-  .logo.large-3.columns{:id => "logo", "data-mercury" => "simple"}
-    %h5 Your logo goes here
-  .about.large-1.columns
-    %a{:href => "/cms/What-is"}
-      %span What is kickstarter?
-  .discover.large-1.menu.columns
-    %a{:href => ""} Discover great projects
-  .start.large-1.menu.columns
-    %a{:href => "#"} Start a project
-      
-  .search-box.large-3.columns
-    %input{:type => "search", :value => "Search projects"} 
-  .help.style.large-1.columns
-    %p 
-  .signup.style.large-1.columns
-
-    %a{:href => "#"} Sing up
-  .login.style.large-1.columns
-    %a{:href => "#"} Log in
-%hr
-
+%header.nav.navbar.header
+  .container.content
+    .logo{:id => "logo", "data-mercury" => "simple"}
+    %ul.nav.navbar-nav.menu
+      %li
+        = link_to 'What is kickstarter?', '/cms/What-is'
+      %li
+        %a{href: '#'}
+          %strong Discover
+          %span great projects
+      %li
+        %a{href: '#'}
+          %strong Start
+          %span a project
+    .navbar-form.pull-left
+      %input{:type => "text", :class => "form-control search col-lg-8", :placeholder => "Search"}
+    %ul.nav.navbar-nav.pull-right.menu-right
+      %li
+        = link_to 'Help', '#'
+      %li 
+        = link_to 'Sign up', '#'
+      %li
+        = link_to 'Log in', '#'
