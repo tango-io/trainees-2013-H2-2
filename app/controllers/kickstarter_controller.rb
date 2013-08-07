@@ -1,0 +1,4 @@
+class KickstarterController < ApplicationController
+
+
+end
