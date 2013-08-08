@@ -32,6 +32,9 @@
       =raw @project.category_id
     %h4 Change:
     \#{f.collection_select :category_id , @categories, :id,:name, {:prompt => @project.category_id}}
+    %h4 
+      City:
+      =raw @project.location
     =f.submit
     :javascript
       $('#project_content').wysihtml5();
