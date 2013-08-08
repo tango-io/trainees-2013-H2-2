@@ -1,33 +1,38 @@
 .container
-  %h1 Create project
-  %section.col-4.creatre-project
+  %h1.title Meet your new project
+  %section.row.create-project
     = form_for @project do |f|
-      %p
-        =f.label :name
-        =f.text_field :name , class: 'form-control'
-      %p
-        =f.label :description
-        =f.text_field :description , class: 'form-control'
-      %p
-        =f.label :content
-        =f.text_area :content, :size => "10x10", class: 'form-control'
-      %p 
-        =f.label :goal
-        =f.text_field :goal, class: 'form-control'
-      %p 
-        =f.label :period
-        =f.text_field :period, class: 'form-control'
-      %p 
-        =f.label :categories
-        \#{f.collection_select :category_id , @categories, :id,:name, class: 'btn btn-default btn-sm dropdown-toggle' }
-      %p 
-        =f.label :imagen 
-        =f.file_field :picture
-        =f.hidden_field :picture_cache
-      %p 
-        =f.label :video
-        =f.text_field :video, class: 'form-control'
-        =f.submit 'Enviar', class: 'btn btn-default btn-sm dropdown-toggle'
-      %br/
-      :javascript
-        $('#project_content').wysihtml5();
+      .col-lg-3
+        %p
+          =f.label :name
+          =f.text_field :name , class: 'form-control'
+        %p
+          =f.label :description
+          =f.text_field :description , class: 'form-control'
+        %p
+          =f.label :content
+          =f.text_area :content, :size => "10x10", class: 'form-control'
+      .col-lg-1
+      .col-lg-3
+        %p 
+          =f.label :goal
+          =f.text_field :goal, class: 'form-control'
+        %p 
+          =f.label :period
+          =f.text_field :period, class: 'form-control'
+        %p 
+          =f.label :categories
+          \#{f.collection_select :category_id , @categories, :id,:name, class: 'btn btn-default btn-sm dropdown-toggle' }
+      .col-lg-1
+      .col-lg-3
+        %p 
+          =f.label :imagen 
+          =f.file_field :picture
+          =f.hidden_field :picture_cache
+        %p 
+          =f.label :video, 'Video (url)'
+          =f.text_field :video, class: 'form-control'
+          =f.submit 'Enviar', class: 'btn btn-primary dropdown-toggle align'
+        %br/
+        :javascript
+          $('#project_content').wysihtml5();
