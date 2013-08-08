@@ -1,8 +1,8 @@
-$(document).ready ->
-  $("#projects").infinitescroll
-    navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)
-    nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)
-    itemSelector: "#projects tr.project" # selector for all items you'll retrieve
+#$(document).ready ->*/
+#$("#projects").infinitescroll*/
+    #navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)*/
+    #nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)*/
+    #itemSelector: "#projects tr.project" # selector for all items you'll retrieve*/
 
 
 # Place all the behaviors and hooks related to the matching controller here.

@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
     def index
-    # create json for angular
       @page = Page.all
       respond_to do |format|
          format.json { render json: @page }
@@ -19,7 +18,6 @@ class PagesController < ApplicationController
       end
     end
     def show
-      # create json for angular
       @page = Page.find(params[:id])      
       #@page = Page.friendly.find(params[:id])      
       respond_to do |format|
