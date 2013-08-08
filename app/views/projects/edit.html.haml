@@ -1,0 +1,35 @@
+%h1 Edit project
+%section
+  = form_for @project do |f|
+    %h4 
+      Name:
+      = raw @project.name
+    %p   
+      =f.label :description
+      =f.text_field :description
+    %p 
+      =f.label :content
+      =f.text_area :content, :size => "70x10"
+    %h4 
+      Period:
+      = raw @project.period
+    %h4 
+      Goal:
+      =raw @project.goal
+    %h4 Video  
+    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => @project.video, :width => "640"}
+    %h4 
+      Change: 
+      =f.text_field :video
+    %h4 Picture:
+    %img{:src => @project.picture }
+    %br
+      Change:
+      =f.file_field :picture, :value => "holis"
+      =f.hidden_field :picture_cache
+    %h4 
+      Category:
+      =raw @project.category_id
+    %h4 Change:
+    \#{f.collection_select :category_id , @categories, :id,:name, {:prompt => @project.category_id}}
+    =f.submit
