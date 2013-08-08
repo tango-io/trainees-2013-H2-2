@@ -1,7 +1,8 @@
 class DiscoversController < ApplicationController
   def index
-    @categories = Category.last
-    @projects_category = @categories.projects.all
-    @subcategories = @categories.subcategories.all
+    @category = Category.first
+    @categories = Category.all
+    @projects_category = @category.projects.all
+    @subcategories_of = @category.subcategories.all
   end
 end

@@ -12,19 +12,7 @@
                 =image_tag "#{project.picture}", class: 'img-project'
                 %h5 
                   %strong #{project.name}
-                  %span By #{project.user_id}
+                  %span By #{project.author}
                 %p #{project.description}
                 .progress
                   #{project.period}
-  .col-lg-3
-    %ul
-      %li
-        %h3 Categories
-      - @categories.each do |category|
-        %li
-          %h3
-            = link_to "#{category.name}", ""
-          %ul
-          - category.subcategories.all.each do |subcategory|
-            %li 
-              = link_to subcategory.name, projects_path(:id)
