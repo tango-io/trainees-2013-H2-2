@@ -1,44 +1,47 @@
-%section.tittle-project
-  %h3
+%section.container
+  
+  %h3#title
     = raw @project.name
-  %h5
+  %h5#small-title
     by
     Fulanito 
 
-.project.row
-  .submenu.large-12.columns
-    %ul
-      %li home
-      %li 
-        Updates 
-        %a{:href => "#"} 3
-      %li 
-        Backers
-        %a{:href => "#"} 2
-      %li 
-        Comments 
-        %a{:href => "#"} 2
-%br
-%section.row.show-project
-  .content-project.large-8.columns
-    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => @project.video, :width => "640"}
-    %h5
-      = raw @project.content
-  .dates-project.large-3.columns
-    %h3 291
-    %p backers
-    %h3 $716,129
-    pledged of $ 
-    = raw @project.goal
-    goal
-    %h3 
-      = raw @project.period
-    days to go
-    %br
-    %br
-    .btn-back.small.button
-      %p Back this project $1 minimum pledge
-    %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
-    %p.funding-period Jul 19, 2013 - Aug 23, 2013
+  .project
+    .submenu.col-lg-12
+      %ul
+        %li home
+        %li  
+          %a{:href => "#"}  Updates 
+        %li 
+          %a{:href => "#"} Backers 
+        %li  
+          %a{:href => "#"} Comments
+  %br
+%section.container-2.show-project
+  .wrap-section
+    .content-project.col-lg-8
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => @project.video, :width => "640"}
+      %h5
+        = raw @project.content
+    .col-space
+    .dates-project.col-lg-3
+      %h3 291
+      %p backers
+      %h3 $716,129
+      pledged of $ 
+      = raw @project.goal
+      goal
+      %h3 
+        = raw @project.period
+      days to go
+      %br
+      %br
+      .btn.btn2.btn-success
+        %p
+          Back this project
+          %br
+          $1 minimum pledge
+      %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
+      %p.funding-period Jul 19, 2013 - Aug 23, 2013
 %br
 %br

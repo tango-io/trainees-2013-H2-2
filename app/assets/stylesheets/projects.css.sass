@@ -1,37 +1,62 @@
-body
+.container-2
+  width: 994px
+  margin: 0 auto
 
-  background: #eef2ea
+#title
+  padding: 20px 0 0 0
+  margin: 0 auto
+  text-align: center
+#small-title
+  padding: 20px 0 0 0
+  margin: 0 auto
+  text-align: center
+
+.btn2
+  padding: 5px 20px 1px 20px
+.col-space
+  width: 50px
+  float: left
+  position: relative
+  min-height: 1px
+  padding-right: 15px
+
+.wrap-section
+  width: 970px
+  margin: 0 auto
+  height: 100%
+  overflow: hidden
+  padding: 25px 0px
 .submenu
   font-size: 12px
   font-family: "Helvetica Neue",Helvetica,Arial
   ul 
     display: inline
     a
-      background: rgb(117, 121, 111)
-      border-radius: .3em
-      color: white
-      font-size: 12px
+      //background: rgb(117, 121, 111)
+      //border-radius: .3em
+      //color: white
+      //font-size: 12px
+      &:hover
+        text-decoration: none
     li 
       display: inline
 .grey
   color: #75796F
 
 .show-project
-  padding-top: 1.5em
-  padding-bottom: .5em
-  padding-right: 1em
   border-style: solid
   border-color: rgba(192,192,192,0.5)
-  -webkit-box-shadow: 3px 3px 2px #CCC 
-  -moz-box-shadow: 3px 3px 2px #CCC
-  -ms-box-shadow: 3px 3px 2px #CCC
   box-shadow: 3px 3px 2px #CCC
   background: white
+  height: 100%
+
 .dates-project
   background: #eef2ea
 
+
 .content-project
   text-align: justify
+  display: block
 
 .tittle-project
   text-align: center
@@ -49,7 +74,6 @@ hr
 
 .menu-discover-projects
   padding-left: 2em
-  float: right
   li
   a
     border-radius: 3px
@@ -61,10 +85,8 @@ hr
     &:hover
       background: #78EB05
 
-    
-
 .espacio
-  background: white
+  background: #ffffff
   width: 15em
   padding: .5em
   border-radius: 5px
