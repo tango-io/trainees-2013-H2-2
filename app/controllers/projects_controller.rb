@@ -32,6 +32,9 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
+    vid = @project.video.split("embed/")
+    cad2 = "http://www.youtube.com/watch?v=" + vid[1]
+    @video = cad2
     @categories = Category.all
   end
 

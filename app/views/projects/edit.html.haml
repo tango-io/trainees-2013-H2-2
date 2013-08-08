@@ -20,7 +20,7 @@
     %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => @project.video, :width => "640"}
     %h4 
       Change: 
-      =f.text_field :video
+      =f.text_field :video, :value => @video
     %h4 Picture:
     %img{:src => @project.picture }
     %br
