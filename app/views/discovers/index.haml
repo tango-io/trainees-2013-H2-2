@@ -1,16 +1,30 @@
-%h1 Discovers
-.row 
-  .large-9.columns
+%h3 Discover Projects
+%p.subtitle Passion, ideas, and ambition abound. Start exploring!
+.row
+  .col-lg-9
     %ul
+      %h3 Staff Picks
       - @projects_category.each do |project|
-        %li #{project.category.name}
-        %li #{project.name}
-        %li #{project.author}
-        %li #{project.description}
-        %li #{project.period}
-
-  %ul
-    %li
-      %h3 #{@categories.name}
-    - @subcategories.each do |subcategory|
-      %li #{subcategory.name}
+        %li
+          %a{:href => "#{project_path(project)}"}
+            .project-bg
+              .project-wrap
+                =image_tag "#{project.picture}", class: 'img-project'
+                %h5 
+                  %strong #{project.name}
+                  %span By #{project.author}
+                %p #{project.description}
+                .progress
+                  #{project.period}
+  .col-lg-3
+    %ul
+      %li
+        %h3 Categories
+      - @categories.each do |category|
+        %li
+          %h3
+            = link_to "#{category.name}", ""
+          %ul
+          - category.subcategories.all.each do |subcategory|
+            %li 
+              = link_to subcategory.name, projects_path(:id)
