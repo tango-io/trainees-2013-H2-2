@@ -28,3 +28,5 @@
       \#{f.collection_select :category_id , @categories, :id,:name}
       =f.submit 
     %br/
+    :javascript
+      $('#project_content').wysihtml5();
