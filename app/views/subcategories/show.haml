@@ -3,8 +3,8 @@
 .row
   .col-lg-9
     %ul
-      %h3 Staff Picks
-      - @projects_category.each do |project|
+      %h3 #{@subcategory.name}
+      - @projects_subcategory.each do |project|
         %li
           %a{:href => "#{project_path(project)}"}
             .project-bg
@@ -16,3 +16,15 @@
                 %p #{project.description}
                 .progress
                   #{project.period}
+  .col-lg-3
+    %ul
+      %li
+        %h3 Categories
+      - @categories.each do |category|
+        %li
+          %h3
+            = link_to "#{category.name}", ""
+          %ul
+          - category.subcategories.each do |subcategory|
+            %li 
+              = link_to subcategory.name, subcategory_path(subcategory)

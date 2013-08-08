@@ -27,4 +27,4 @@
           %ul
           - category.subcategories.all.each do |subcategory|
             %li 
-              = link_to subcategory.name, projects_path(:id)
+              = link_to subcategory.name, subcategory_path(subcategory)
