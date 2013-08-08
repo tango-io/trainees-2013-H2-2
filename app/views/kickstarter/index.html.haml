@@ -1,13 +1,15 @@
 
 .picture 
-  .info
-    %h2 Image display
-    %p Description about how kickstart works 
-    %a{:href => "#"} Link to the description page
+  .left
+  .right
+.info
+  %h2 Image display
+  %p Description about how kickstart works 
+  %a{:href => "#"} Link to the description page
     
 
-.main-container.row
-  %article.large-9.columns
+.main.container
+  %article.col-9
     %h3 Selected category
     %iframe{:allowfullscreen => "", :frameborder => "0", :height => "250", :src => "//www.youtube.com/embed/_OT0-GQ2SaA?list=UUPV33YGEVLwtOotz9ZG0XQw", :width => "340"}
     .article-content  
@@ -18,7 +20,7 @@
       %p
         "Lorem ipsum dolor sit amet. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   
-  %aside.side-bar.large-3.columns
+  %aside.side-bar.col-3
     %ul.side-bar-nav
       %li.side-bar-item
         %a{:href => "#"} Categories
@@ -45,39 +47,40 @@
       %li.side-bar-item
         %a{:href => "#"}  Categories
 
-%hr
-.popular-content.row
-  %h3 Popular
-  %h4 In this section appears the most popular projects 
-  %table
-    %tr
-      %td
-        %img{:src => "/assets/photo-little.jpg"} 
-        %h5 Here goes the project description
-        %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
-        %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
-      %td
-        %img{:src => "/assets/photo-little.jpg"}
-        %h5 Here goes the project description
-        %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
-        %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
+
+  .popular-content.col-12
+    
+    %h3.popular-title 
+      = link_to 'Popular', '#'
+    %h4 In this section appears the most popular projects 
+    %table
+      %tr
+        %td
+          %img{:src => "/assets/photo-little.jpg"} 
+          %h5 Here goes the project description
+          %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
+          %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
+        %td
+          %img{:src => "/assets/photo-little.jpg"}
+          %h5 Here goes the project description
+          %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
+          %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
 
 
-      %td 
-        %img{:src => "/assets/photo-little.jpg"}
-        %h5 Here goes the project description
-        %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
-        %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
+        %td 
+          %img{:src => "/assets/photo-little.jpg"}
+          %h5 Here goes the project description
+          %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
+          %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
 
-      %td
-        %img{:src => "/assets/photo-little.jpg"}
-        %h5 Here goes the project description
-        %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
-        %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
+        %td
+          %img{:src => "/assets/photo-little.jpg"}
+          %h5 Here goes the project description
+          %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab
+          %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
 
-%hr  
-.curated-pages.row
-  %h2 Curated Pages
-  .curated-projects.large-12.columns
+
+    %h3.curated-title
+      = link_to 'Curated Pages', '#'
     %h1 Here goes the curated pages  
 
