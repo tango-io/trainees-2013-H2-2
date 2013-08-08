@@ -4,5 +4,5 @@ Kickstarter::Application.routes.draw do
    resources :projects
    resources :discovers
    resources :pages
-
+   resources :subcategories
 end
