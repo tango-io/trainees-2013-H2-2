@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20130808154516) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "picture"
+    t.string   "location"
   end
 
   create_table "subcategories", force: true do |t|
