@@ -1,9 +1,11 @@
 
 .picture 
-  .info
-    %h2 Image display
-    %p Description about how kickstart works 
-    %a{:href => "#"} Link to the description page
+  .left
+  .right
+.info
+  %h2 Image display
+  %p Description about how kickstart works 
+  %a{:href => "#"} Link to the description page
     
 
 .main.container
@@ -47,7 +49,9 @@
 
 
   .popular-content.col-12
-    %h3 Popular
+    
+    %h3.popular-title 
+      = link_to 'Popular', '#'
     %h4 In this section appears the most popular projects 
     %table
       %tr
@@ -76,7 +80,7 @@
           %h5 In this section you can see statistics about the project such as funded, pledged and days to go 
 
 
-    .curated-projects.col-12
-      %h2 Curated Pages
-      %h1 Here goes the curated pages  
+    %h3.curated-title
+      = link_to 'Curated Pages', '#'
+    %h1 Here goes the curated pages  
 
