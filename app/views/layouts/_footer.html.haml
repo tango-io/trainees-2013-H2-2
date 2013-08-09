@@ -1,2 +1,8 @@
-.footer
-  %h1 Here goes the site map
+%footer
+  %section.container
+    %h3#title
+    .sitemap
+      - @sitemaps.each do |site|
+        %li
+          %a{:href => "#{page_path(site)}"}
+            %p #{site.title}
