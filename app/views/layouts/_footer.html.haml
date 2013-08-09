@@ -1,7 +1,16 @@
-%footer
-  %section.container
-    %h3#title
-    .sitemap
+%footer.footer
+  %span.scissors
+  %section.content.content-center
+    %ul.col-lg-3.span3
+      %li
+        %h3 Discover
+      - @categories.each do |category|
+        %li
+          %p
+            = link_to "#{category.name}", ""
+    %ul.sitemap.col-log-3.span3
+      %li
+        %h3 Pages
       - @sitemaps.each do |site|
         %li
           %a{:href => "#{page_path(site)}"}
