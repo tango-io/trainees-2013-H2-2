@@ -73,6 +73,8 @@ GEM
     multi_json (1.7.8)
     pg (0.16.0)
     polyglot (0.3.3)
+    puma (2.5.0)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -102,7 +104,6 @@ GEM
       rdoc (~> 3.10)
     sitemap_generator (4.1.1)
       builder
-    slop (3.4.6)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -139,6 +140,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   pg
+  puma
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc
