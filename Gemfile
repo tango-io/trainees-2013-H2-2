@@ -8,6 +8,8 @@ gem 'pg'
 
 gem 'carrierwave'
 
+gem 'sitemap_generator'
+
 gem 'haml'
 
 # Use SCSS for stylesheets
