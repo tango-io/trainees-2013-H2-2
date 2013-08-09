@@ -102,6 +102,7 @@ GEM
       rdoc (~> 3.10)
     sitemap_generator (4.1.1)
       builder
+    slop (3.4.6)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
