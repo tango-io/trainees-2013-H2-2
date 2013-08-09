@@ -6,8 +6,7 @@
   %tbody(ng-repeat="page in pages")
     %tr
       %td {{page.title}}
-      %td
-        %a{href: "/pages/{{page.id}}"} show
+      %td= link_to 'Show', "/pages/{{page.slug}}"
       %td= link_to 'Edit', "/pages/{{page.id}}"+"/edit"
       %td= link_to 'Destroy Page',"/pages/{{page.id}}",method: :delete,data: { confirm: 'Are you sure?' }
 %br/

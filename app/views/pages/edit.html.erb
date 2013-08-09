@@ -1,5 +1,6 @@
 <h1>Edit Page</h1>
 <%= form_for @page, :url => { :action => 'update' } do |f| %>
+
 <% if @page.errors.any? %>
   <div id="errorExplanation">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited

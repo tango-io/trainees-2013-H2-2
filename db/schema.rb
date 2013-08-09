@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20130808194215) do
     t.datetime "updated_at"
   end
 
+  add_index "pages", ["slug"], name: "index_pages_on_slug", using: :btree
+
   create_table "pledges", force: true do |t|
     t.string   "project_id"
     t.string   "name"

@@ -18,8 +18,8 @@ class PagesController < ApplicationController
       end
     end
     def show
-      @page = Page.find(params[:id])      
-      #@page = Page.friendly.find(params[:id])      
+#      @page = Page.find(params[:id])      
+      @page = Page.friendly.find(params[:id])      
       respond_to do |format|
          format.json { render json: @page }
          format.html { render html: @page }
