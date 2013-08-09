@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   def index
     @project = Project.new
-    @categories = Category.all
+    @subcategories = Subcategory.all
     respond_to do |format|
       format.json { render json: @categories }
       format.html { render html: @categories }
@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    @categories = Category.all
+    @subcategories = Subcategory.all
   end
 
   def show
@@ -19,15 +19,19 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @categories = Category.all
+    @subcategories = Subcategory.all
     @projects = Project.new(project_params)
+    category = Subcategory.find(" #{@projects.subcategory_id}")
+    @projects.category_id = category.category_id
     #@projects.save
     cad = @projects.video.split('=')
     video2 = "//www.youtube.com/embed/" + cad[1]
     @projects.video = video2
-    if @projects.save
-      render 'index'
-    end
+    @projects.save
+    @project = @projects
+    render "show"    
+
+
   end
 
   def edit
@@ -35,7 +39,7 @@ class ProjectsController < ApplicationController
     vid = @project.video.split("embed/")
     cad2 = "http://www.youtube.com/watch?v=" + vid[1]
     @video = cad2
-    @categories = Category.all
+    @subcategories = Subcategory.all
   end
 
   def update
@@ -45,7 +49,10 @@ class ProjectsController < ApplicationController
      cad = @projects.video.split('=')
      video2 = "//www.youtube.com/embed/" + cad[1]
      @projects.update(:video => video2)
-     redirect_to index
+     category = Subcategory.find(" #{@projects.subcategory_id}")
+     category_id = category.category_id
+     @projects.update(:category_id => category_id)
+     redirect_to show
    else 
      render 'edit'
    end
@@ -54,11 +61,11 @@ class ProjectsController < ApplicationController
 private
 
   def project_params
-    params.require(:project).permit(:name,:description, :content, :picture, :video, :goal, :period, :category_id, :location)
+    params.require(:project).permit(:name,:description, :content, :picture, :video, :goal, :period, :subcategory_id, :location)
   end
   
   def project_params2
-    params.require(:project).permit(:description, :content, :picture, :video, :category_id)
+    params.require(:project).permit(:description, :content, :picture, :video, :subcategory_id)
   end
 
 end

@@ -21,8 +21,8 @@
           =f.label :period
           =f.text_field :period, class: 'form-control'
         %p 
-          =f.label :categories
-          \#{f.collection_select :category_id , @categories, :id,:name, class: 'btn btn-default btn-sm dropdown-toggle' }
+          =f.label :subcategory_id
+          \#{f.collection_select :subcategory_id , @subcategories, :id,:name, class: 'btn btn-default btn-sm dropdown-toggle' }
       .col-lg-1
       .col-lg-3
         %p 
