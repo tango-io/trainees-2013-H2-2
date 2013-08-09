@@ -27,9 +27,11 @@ class ProjectsController < ApplicationController
     cad = @projects.video.split('=')
     video2 = "//www.youtube.com/embed/" + cad[1]
     @projects.video = video2
-    if @projects.save
-      render 'index'
-    end
+    @projects.save
+    @project = @projects
+    render "show"    
+
+
   end
 
   def edit
@@ -47,7 +49,10 @@ class ProjectsController < ApplicationController
      cad = @projects.video.split('=')
      video2 = "//www.youtube.com/embed/" + cad[1]
      @projects.update(:video => video2)
-     redirect_to index
+     category = Subcategory.find(" #{@projects.subcategory_id}")
+     category_id = category.category_id
+     @projects.update(:category_id => category_id)
+     redirect_to show
    else 
      render 'edit'
    end

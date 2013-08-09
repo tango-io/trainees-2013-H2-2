@@ -29,14 +29,14 @@
         =f.file_field :picture, :value => "holis"
         =f.hidden_field :picture_cache
       %h4 
-        Category:
-        =raw @project.category_id
+        Subcategory:
       %h4 Change:
-      \#{f.collection_select :category_id , @categories, :id,:name, {:prompt => @project.category_id}}
-      %h4 
+      \#{f.collection_select :subcategory_id , @subcategories, :id,:name, {:prompt => @project.subcategory_id}}
+      %h4
         City:
         =raw @project.location
       =f.submit :class => "btn btn-primary dropdown-toggle align"
       :javascript
         $('#project_content').wysihtml5();
+
 
