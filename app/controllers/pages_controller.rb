@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
     def index
-      @page = Page.all
+   @page = Page.all
       respond_to do |format|
          format.json { render json: @page }
          format.html { render html: @page }

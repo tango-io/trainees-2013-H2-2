@@ -10,5 +10,10 @@
  *
  *
  *= require_self
- *= require_tree .
+ *= require twitter/bootstrap
+ *= require bootstrap-wysihtml5
+ *= require layouts/
+ *= require projects.css.sass
+ *= require screen.sass
+ *= require states.sass
  */
