@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :is_admin?
+
   def index
     @page = Page.all
     respond_to do |format|
@@ -51,5 +53,12 @@ class PagesController < ApplicationController
   private 
   def page_params
     params.require(:page).permit(:title, :content, :style)
+  end
+
+  def is_admin?
+    unless current_user.admin?
+      flash[:error] = "You must be an Admin to access this section"
+      redirect_to root_path
+    end
   end
 end
