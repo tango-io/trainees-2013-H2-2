@@ -2,10 +2,6 @@ class ProjectsController < ApplicationController
   def index
     @project = Project.new
     @subcategories = Subcategory.all
-    respond_to do |format|
-      format.json { render json: @categories }
-      format.html { render html: @categories }
-    end
   end
 
   def new
@@ -14,7 +10,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    #@projects = Project.all
     @project = Project.find(params[:id]);
   end
 
@@ -23,11 +18,8 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     category = Subcategory.find(" #{@project.subcategory_id}")
     @project.category_id = category.category_id
-    #@projects.save
     if (@project.video =~ /^(https?:\/\/)?(www\.)?youtube.com\/watch\?v=([a-z0-9-]+)/i) 
-     cad = @project.video.split('=')
-     video2 = "//www.youtube.com/embed/" + cad[1]
-     @project.video = video2
+     @project.video = format_video(@project.video)
     end
     if @project.save 
       render "show"
@@ -38,35 +30,43 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
-    vid = @project.video.split("embed/")
-    cad2 = "http://www.youtube.com/watch?v=" + vid[1]
-    @video = cad2
+    video = @project.video.split("embed/")
+    video_user_format = "http://www.youtube.com/watch?v=" + video[1]
+    @video = video_user_format
     @subcategories = Subcategory.all
   end
 
   def update
-     @projects = Project.find(params[:id]);
-   if  @projects.update_attributes(project_params2)
-     @projects = Project.find(params[:id]);
-     cad = @projects.video.split('=')
-     video2 = "//www.youtube.com/embed/" + cad[1]
-     @projects.update(:video => video2)
-     category = Subcategory.find(" #{@projects.subcategory_id}")
-     category_id = category.category_id
-     @projects.update(:category_id => category_id)
-     redirect_to show
-   else 
-     render 'edit'
-   end
+    @subcategories = Subcategory.all
+    @project = Project.find(params[:id])
+    if (params[:video] =~ /^(https?:\/\/)?(www\.)?youtube.com\/watch\?v=([a-z0-9-]+)/i) 
+      video = format_video(params[:video])
+      @project.update(:video => video)
+    end
+    if  @project.update_attributes(project_params2)
+      
+      category = Subcategory.find(" #{@project.subcategory_id}")
+      category_id = category.category_id
+      @project.update(:category_id => category_id)
+      redirect_to show
+    else
+      render 'edit'
+    end
   end
  
-  private
+
+private
+  def format_video(video)
+    video_parts = video.split('=')
+    video_format = "//www.youtube.com/embed/" + video_parts[1]
+  end
+
   def project_params
     params.require(:project).permit(:name,:description, :content, :picture, :video, :goal, :period, :subcategory_id, :location)
   end
   
   def project_params2
-    params.require(:project).permit(:description, :content, :picture, :video, :subcategory_id)
+    params.require(:project).permit(:description, :content, :picture, :subcategory_id)
   end
 
 end
