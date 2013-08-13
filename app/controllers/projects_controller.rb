@@ -20,18 +20,20 @@ class ProjectsController < ApplicationController
 
   def create
     @subcategories = Subcategory.all
-    @projects = Project.new(project_params)
-    category = Subcategory.find(" #{@projects.subcategory_id}")
-    @projects.category_id = category.category_id
+    @project = Project.new(project_params)
+    category = Subcategory.find(" #{@project.subcategory_id}")
+    @project.category_id = category.category_id
     #@projects.save
-    cad = @projects.video.split('=')
-    video2 = "//www.youtube.com/embed/" + cad[1]
-    @projects.video = video2
-    @projects.save
-    @project = @projects
-    render "show"    
-
-
+    if (@project.video =~ /^(https?:\/\/)?(www\.)?youtube.com\/watch\?v=([a-z0-9-]+)/i) 
+     cad = @project.video.split('=')
+     video2 = "//www.youtube.com/embed/" + cad[1]
+     @project.video = video2
+    end
+    if @project.save 
+      render "show"
+    else
+      render "new"
+    end
   end
 
   def edit

@@ -2,6 +2,16 @@
   %h1.title Meet your new project
   %section.row.create-project
     = form_for @project do |f|
+      = if @project.errors.any?
+        .error_explanation
+          %h2 
+            Prohibited this project from being saved:
+            = pluralize(@project.errors.count, "error") 
+          %ul 
+          = @project.errors.full_messages.each do |msg|
+            %li 
+              = msg
+
       .col-lg-3
         %p
           =f.label :name
