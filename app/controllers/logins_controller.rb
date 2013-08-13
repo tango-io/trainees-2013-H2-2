@@ -1,12 +1,13 @@
 class LoginsController < ApplicationController
-  def sign_up!
+  def signUp!
+    puts "wtffffffffffffffffffffffffffff"
   end
-  def sign_up?
+  def signUp?
   end
-  def log_in!
+  def logIn!
   end
-  def log_in?
+  def logIn?
   end
-  def log_out!
+  def logOut!
   end
 end
