@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'pry'
+
 gem 'carrierwave'
 
 gem 'sitemap_generator'
@@ -32,10 +34,6 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
-gem 'anjlab-bootstrap-rails', '>= 2.1', :require => 'bootstrap-rails'
-
-gem 'bootstrap-wysihtml5-rails'
 
 gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 group :doc do

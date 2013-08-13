@@ -15,7 +15,5 @@
 //= require turbolinks
 //= require angular.min.js
 //= require main.js
-//= require twitter/bootstrap
-//= require bootstrap-wysihtml5
 //= require_tree .
 //= require_self
