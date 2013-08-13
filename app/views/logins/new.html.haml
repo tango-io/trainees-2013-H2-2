@@ -1,0 +1,22 @@
+.container
+  .login
+    %h2.title Log in
+    %h3 Please log in to continue
+    = form_for @login do |l|
+      %p
+        =l.label :fullname
+        =l.text_field :fullname
+      %p
+        =l.label :email
+        =l.password_field :email
+      %p   
+        =l.label :reemail 
+        =l.text_field :reemail
+      %p   
+        =l.label :repassword
+        =l.text_field :repassword 
+      %p
+        =l.submit 'Log me in!' 
+  .signup
+    .facebook  
+

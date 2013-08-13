@@ -1,13 +1,18 @@
 class LoginsController < ApplicationController
-  def signUp!
-    puts "wtffffffffffffffffffffffffffff"
+  def index
+    @login = Login.new
+    render  :new
   end
-  def signUp?
+  def new
+    @login = Login.new
   end
-  def logIn!
+  def create
+    puts "loginparams #{loginParams}"
+
+    binding.pry
   end
-  def logIn?
-  end
-  def logOut!
+  def loginParams
+    params.require(:login).permit(:fullname,:email,:reemail,:repassword)
   end
 end
+
