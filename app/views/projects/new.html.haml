@@ -19,9 +19,6 @@
         %p
           =f.label :description
           =f.text_field :description , class: 'form-control'
-        %p
-          =f.label :content
-          =f.text_area :content, :size => "10x10", class: 'form-control'
       .col-lg-1
       .col-lg-3
         %p 
@@ -42,7 +39,14 @@
         %p 
           =f.label :video, 'Video (url)'
           =f.text_field :video, class: 'form-control'
-          =f.submit 'Send', class: 'btn btn-primary dropdown-toggle align'
         %br/
+      .col-lg-10
+        %p
+          =f.label :content
+          =f.text_area :content, :size => "10x10", class: 'form-control'
+        %p
+          =f.label :faqs, 'FAQS'
+          =f.text_area :faqs, :size => "10x10", class: 'form-control' 
+          =f.submit 'Send', class: 'btn btn-primary dropdown-toggle align'
         :javascript
           $('#project_content').wysihtml5();
