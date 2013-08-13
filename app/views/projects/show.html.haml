@@ -21,6 +21,11 @@
       %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => @project.video, :width => "640"}
       %h5
         = raw @project.content
+      %div#project-faqs
+        %h3.faq-title FAQ
+        %div.faqs /Here goes the faqs
+        %button.btn.btn-primary.btn-space{ type: "button", "data-toggle" => "modal", href: "#myModal"} Ask a question
+
     .col-space
     .dates-project.col-lg-3
       %h3 291
