@@ -6,14 +6,14 @@ class LoginsController < ApplicationController
     @login = Login.new
   end
   def create
-    @login = Login.new(loginParams)
-    if @login.save
-      render 'new'
-    else
-      render 'new'
-    end
+    @login = Login.new
+    Login.presence?(@login,loginParams)
+    
+    render 'new'
+
   end
   def loginParams
     params.require(:login).permit(:fullname,:email,:password,:reemail,:repassword)
   end
 end
+
