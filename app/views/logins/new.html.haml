@@ -1,22 +1,31 @@
 .container
-  .login
-    %h2.title Log in
+  .login 
+    %h2.title Log in 
     %h3 Please log in to continue
     = form_for @login do |l|
+      - if @login.errors.any?
+        .errorExplanation
+          %h2
+            - pluralize(@login.errors.count, "error") 
+            prohibited this post from being saved:
+          %ul
+            - @login.errors.full_messages.each do |msg| 
+              %li 
+                = msg
       %p
         =l.label :fullname
         =l.text_field :fullname
       %p
         =l.label :email
-        =l.password_field :email
+        =l.text_field :email
       %p   
         =l.label :reemail 
         =l.text_field :reemail
+      %p
+        =l.label :password
+        =l.password_field :password
       %p   
         =l.label :repassword
-        =l.text_field :repassword 
+        =l.password_field :repassword 
       %p
         =l.submit 'Log me in!' 
-  .signup
-    .facebook  
-
