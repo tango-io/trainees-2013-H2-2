@@ -22,13 +22,18 @@ class Login < ActiveRecord::Base
     if @array_params.include?('email') and @array_params.include?('reemail') and @params['email'] != @params['reemail']
       @instance.errors.add('email','Email not match with reemail')
     else
-      verify_email(@params['email'])
+       verify_email(@params['email'])
     end
     if @array_params.include?('password') and @array_params.include?('repassword') and @params['password'] != @params['repassword']
       @instance.errors.add('password','Password not match with reepasswors')
-    else
-      verify_password(@params['password'])
-    end  
+    end      
+  end
+  def self.verify_email(email)
+    puts email
+    if (email !=~ /^[a-z]+(\w?[a-z]+|\.?[a-z]+)@[a-z]+.com/)
+      @instance.errors.add('email','format email is incorrect')      
+    end
     @instance
   end
+
 end
