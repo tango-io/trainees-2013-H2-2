@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130808194215) do
+ActiveRecord::Schema.define(version: 20130815035941) do
 
   create_table "backers", force: true do |t|
     t.string   "user_id"
@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(version: 20130808194215) do
   end
 
   create_table "comments", force: true do |t|
-    t.string   "project_id"
     t.string   "user_id"
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
   end
 
   create_table "pages", force: true do |t|
@@ -49,8 +49,6 @@ ActiveRecord::Schema.define(version: 20130808194215) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "pages", ["slug"], name: "index_pages_on_slug", using: :btree
 
   create_table "pledges", force: true do |t|
     t.string   "project_id"
