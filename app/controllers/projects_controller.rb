@@ -60,10 +60,6 @@ class ProjectsController < ApplicationController
    end
   end
  
-  def comments
-   #@comments = Comment.where(params[:project_id])
-  end
-
   private
   def project_params
     params.require(:project).permit(:name,:description, :content, :picture, :video, :goal, :period, :subcategory_id, :location)
