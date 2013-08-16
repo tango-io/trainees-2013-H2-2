@@ -59,9 +59,8 @@ class ProjectsController < ApplicationController
      render 'edit'
    end
   end
-
-private
-
+ 
+  private
   def project_params
     params.require(:project).permit(:name,:description, :content, :picture, :video, :goal, :period, :subcategory_id, :location)
   end
