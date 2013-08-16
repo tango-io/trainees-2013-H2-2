@@ -1,0 +1,12 @@
+%section.comments
+  %div.new-comment
+    %p Only backers can post a comment. If you have a question ask 
+    -@comments.each do |comment|
+      %ul
+        %li #{comment.comment}
+    %p Write a comment
+    = form_for :comment do |f|
+      = f.label :comment, 'Write your comment here'
+      = f.text_field :comment, :class => "comment-area"
+      = f.submit 'Comment' 
+      
