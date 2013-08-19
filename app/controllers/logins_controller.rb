@@ -7,13 +7,10 @@ class LoginsController < ApplicationController
   end
   def create
     @login = Login.new
-    Login.presence?(@login,loginParams)
-    
+    Login.validate?(@login,loginParams)
     render 'new'
-
   end
   def loginParams
     params.require(:login).permit(:fullname,:email,:password,:reemail,:repassword)
   end
 end
-
