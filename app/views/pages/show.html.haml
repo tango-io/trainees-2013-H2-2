@@ -1,2 +1,6 @@
-.cms-container(ng-controller="showPageController" ng-init="showPage(#{@page.id})")
-  .text()  
+%br
+%h1
+  = @page.title
+%br
+.page_content(ng-controller="showPageController" ng-init="showPage(#{@page.id})")
+   

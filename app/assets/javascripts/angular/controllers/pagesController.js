@@ -1,5 +1,6 @@
 traineesTango.controller('pagesController', ['$scope','$http', function($scope, $http){
   $scope.pages = {};
+
   $scope.showPages = function(){
     $http.get('/pages.json').success(function(pages){
       $scope.pages = pages;
@@ -11,7 +12,7 @@ traineesTango.controller('pagesController', ['$scope','$http', function($scope, 
       $scope.pages.splice(id, 1);
     });
   };
-  
+
 }]);
 
 
