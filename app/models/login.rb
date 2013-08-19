@@ -14,9 +14,9 @@ class Login < ActiveRecord::Base
         @array_params << key
       end
     }
-    compareTo?
+    compare_to?
   end
-  def self.compareTo?
+  def self.compare_to?
     if @array_params.include?('email') and @array_params.include?('reemail') and @params['email'] != @params['reemail']
       @instance.errors.add('email','Email not match with reemail')
     else
@@ -27,10 +27,7 @@ class Login < ActiveRecord::Base
     else
       verify_password(@params['password'])
     end    
-    if @instance.errors.messages.empty?
-      @instance = Login.new(@params)
-      @instance.save
-    end
+    @instance
   end
   def self.verify_email(email)    
     unless email =~ /^[a-z]+(\w?[a-z]+|\.?[a-z]+)@[a-z]+.com/
