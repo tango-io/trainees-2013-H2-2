@@ -10,8 +10,11 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id]);
-    @pledge = Pledge.where(:project_id => :id)
+    @project = Project.find(params[:id])
+    #date = @project.crated_at.split("-")
+    #@year = date[0]
+    #@month = date[1] 
+    @pledges = Pledge.where(:project_id == @project.id)
   end
 
   def create

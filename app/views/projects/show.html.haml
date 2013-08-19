@@ -47,6 +47,19 @@
       %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
       %p.funding-period 
         = raw @project.created_at
-        
+      %h2 Pledges
+      - @pledges.each do |pledge|
+        %table
+          %tr
+            %td
+              %h3 
+                Name
+                = pledge.name
+              %h3 
+                Description
+                = pledge.description
+              %h3 
+                Amount
+                = pledge.amount
 %br
 %br
