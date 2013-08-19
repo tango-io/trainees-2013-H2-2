@@ -2,6 +2,16 @@
   %h1.edit-title Edit project
   %section
     = form_for @project do |f|
+      = if @project.errors.any?
+        .error_explanation
+          %h2 
+            Prohibited this project from being saved:
+            = pluralize(@project.errors.count, "error") 
+          %ul 
+          = @project.errors.full_messages.each do |msg|
+            %li 
+              = msg
+
       %h4 
         Name:
         = raw @project.name
@@ -20,7 +30,7 @@
       %h4 Video  
       %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => @project.video, :width => "560"}
       %h4 
-        Change: 
+        Change? put a new link: 
         =f.text_field :video, :value => @video
       %h4 Picture:
       %img{:src => @project.picture , :class =>"thumbnail", :width => "560", :height => "315"}
