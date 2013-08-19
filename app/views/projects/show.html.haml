@@ -51,15 +51,12 @@
       - @pledges.each do |pledge|
         %table
           %tr
-            %td
-              %h3 
-                Name
-                = pledge.name
-              %h3 
-                Description
-                = pledge.description
-              %h3 
-                Amount
+            %td.pledge
+              %p 
+                Pledge $
                 = pledge.amount
+                or more
+              %p
+                = pledge.description
 %br
 %br
