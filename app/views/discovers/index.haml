@@ -1,18 +1,2 @@
-%h3 Discover Projects
-%p.subtitle Passion, ideas, and ambition abound. Start exploring!
-.col-lg-9
-  %ul
-    %h3 Staff Picks
-    - @projects_category.each do |project|
-      %li
-        %a{:href => "#{project_path(project)}"}
-          .project-bg
-            .project-wrap
-              =image_tag "#{project.picture}", class: 'img-project'
-              %h5 
-                %strong #{project.name}
-                %span By #{project.user_id}
-              %p #{project.description}
-              .progress
-                #{project.period}
-= render :partial => 'sidebar_right'
+= render :partial => 'shared/projects'
+= render :partial => 'shared/sidebar_right'

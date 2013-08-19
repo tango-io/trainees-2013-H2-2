@@ -1,18 +1,2 @@
-%h3 
-%p.subtitle Passion, ideas, and ambition abound. Start exploring!
-.col-lg-9
-  %ul
-    %h3 #{@category.name}
-    - @projects_category.each do |project|
-      %li
-        %a{:href => "#{project_path(project)}"}
-          .project-bg
-            .project-wrap
-              =image_tag "#{project.picture}", class: 'img-project'
-              %h5 
-                %strong #{project.name}
-                %span By #{project.user_id}
-              %p #{project.description}
-              .progress
-                #{project.period}
-= render :partial => 'discovers/sidebar_right'
+= render :partial => 'shared/projects'
+= render :partial => 'shared/sidebar_right'
