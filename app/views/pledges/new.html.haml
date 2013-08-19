@@ -1,0 +1,39 @@
+.container
+  %h1 Create a new Pledge for your project
+  %h2 
+    Project Name:
+    =raw @project.name
+  %h4 
+    Description: 
+    =raw @project.description
+
+  %section.row.create-pledge
+    =form_for [@project, @pledge] do |f|
+      = if @pledge.errors.any?
+        .error_explanation
+          %h2 
+            Prohibited this project from being saved:
+            = pluralize(@pledge.errors.count, "error") 
+          %ul 
+          = @pledge.errors.full_messages.each do |msg|
+            %li 
+              = msg
+
+
+      .col-lg-3
+        %p
+          =f.label :name
+          =f.text_field :name
+        %p
+          =f.label :description
+          =f.text_area :description
+        %p 
+          =f.label :amount
+          =f.text_field :amount
+          =f.hidden_field :project_id, :value => @project.id
+        =f.submit
+
+-#= raw @project.id
+
+
+
