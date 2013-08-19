@@ -4,7 +4,8 @@ class SubcategoriesController < ApplicationController
 
   def show
     @subcategory = Subcategory.find(params[:id]);
-    @projects_subcategory = @subcategory.projects.all
-    @categories = Category.all
+    @name_section = @subcategory.name
+    @projects_section = @subcategory.projects.all
+    @categories = Category.order("created_at")
   end
 end
