@@ -48,15 +48,14 @@
       %p.funding-period 
         = raw @project.created_at
       %h2 Pledges
-      - @pledges.each do |pledge|
-        %table
-          %tr
-            %td.pledge
-              %p 
-                Pledge $
-                = pledge.amount
-                or more
-              %p
-                = pledge.description
-%br
-%br
+      %ul 
+        - @pledges.each do |pledge|
+          %li.pledge
+            %p.bold 
+              Pledge $
+              = pledge.amount
+              or more
+            %p.bold 0 backers  
+            %p
+              = pledge.description
+              
