@@ -1,5 +1,4 @@
 class LoginsController < ApplicationController
-  before_action :require_login
   def index
     @login = Login.new
   end
@@ -19,12 +18,5 @@ class LoginsController < ApplicationController
   end
   def login_params
     params.require(:login).permit(:fullname,:email,:password,:reemail,:repassword)
-  end
-  def require_login
-    unless session[:user_id]
-      redirect_to :action =>'new'
-    else
-     render 'index'
-    end
   end
 end

@@ -2,8 +2,6 @@
   .login 
     %h2.title Log in 
     %h3 Please log in to continue
-    - if session[:user_id] 
-      - redirect_to :controller => 'kickstarter', :action => 'index'
     = form_for @login do |l|
       - if @login.errors.any?
         .errorExplanation
@@ -30,4 +28,4 @@
         =l.label :repassword
         =l.password_field :repassword 
       %p
-        =l.submit 'Log me in!' 
+        =l.submit 'Sign up!' 

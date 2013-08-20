@@ -1,1 +1,32 @@
-%h1 hello world
+.container
+  .login
+    %h1.title Please 
+    = form_for @login do |l|
+      -if @login.errors.any?
+        .errorExplanation
+          %h2
+            -pluralize(@login.errors.count,"error")
+            Prohibited this post from being saved:
+          %ul 
+            -@login.errors.full_messages.each do |msg| 
+              %li
+                =msg
+      %p
+        =l.label :email
+        =l.text_field :email
+      %p
+        =l.label :password
+        =l.password_field :password
+      %p
+        =l.submit 'Log me in'
+        =link_to "Sign Up", :controller => "logins", :action => "new"
+
+
+
+
+
+
+
+
+
+
