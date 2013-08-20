@@ -5,9 +5,9 @@ class LoginsController < ApplicationController
   def new
   end
   def create
-    Login.validate?(@login,login_params)
+    Login.validate?(@login,log_up_params)
     if @login.errors.messages.empty?
-      @login = Login.new(login_params)
+      @login = Login.new(log_up_params)
       @login.save
       session[:user_id] = @login.id
     end
@@ -15,12 +15,19 @@ class LoginsController < ApplicationController
   end
   def log_in
   end
-  def login
+  def login   
+    if Login.where("email = :x AND password = :y",{x: log_in_params[:email], y: log_in_params[:password]}).present?
+      puts "yes"
+    end
+      
     binding.pry
   end
   private
-  def login_params
+  def log_up_params
     params.require(:login).permit(:fullname,:email,:password,:reemail,:repassword)
+  end
+  def log_in_params
+    params.require(:login).permit(:email,:password)
   end
   def create_instance
     @login = Login.new
