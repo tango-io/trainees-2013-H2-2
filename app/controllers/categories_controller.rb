@@ -16,11 +16,18 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     if @category.update(params_category)
-      redirect_to @category
+      redirect_to category.path
     else
       render 'edit'
     end
   end
+  
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to discovers_path
+  end
+  
   def params_category
     params.require(:category).permit(:name)
   end
