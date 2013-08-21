@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20130821104429) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "backers", force: true do |t|
     t.float    "amount"
     t.datetime "created_at"
