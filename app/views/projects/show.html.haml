@@ -23,9 +23,15 @@
         = raw @project.content
       %div#project-faqs
         %h3.faq-title FAQ
-        %div.faqs /Here goes the faqs
+        %br
+          - @faqs.each do |f|
+            .panel
+              .panel-heading
+                = f.question
+              %br/
+              .panel-body
+                = f.answer
         %button.btn.btn-primary.btn-space{ type: "button", "data-toggle" => "modal", href: "#myModal"} Ask a question
-
     .col-space
     .dates-project.col-lg-3
       %h3 291

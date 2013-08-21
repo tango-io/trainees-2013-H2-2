@@ -14,6 +14,8 @@ class ProjectsController < ApplicationController
     @count = ((@project.created_at + @project.period.days).to_date - Time.now.to_date).to_i 
     @count = 0 unless @count > 0 
     @pledges = Pledge.where(:project_id => @project.id)
+    @faqs    = Faq.where(project_id: [params[:id]])
+    @project = Project.find(params[:id]);
   end
 
   def create
