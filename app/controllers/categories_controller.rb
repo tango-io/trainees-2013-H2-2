@@ -1,7 +1,21 @@
 class CategoriesController < ApplicationController
   def index
   end
+ 
+  def new
+    @category = Category.new
+  end
   
+  def create
+    @category = Category.new(params_category)
+    if @category.save
+      redirect_to @category
+    else
+      render 'new'
+    end
+    
+  end
+
   def show
     @category = Category.find(params[:id]);
     @name_section = @category.name
@@ -16,7 +30,7 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     if @category.update(params_category)
-      redirect_to category.path
+      redirect_to category_path
     else
       render 'edit'
     end
