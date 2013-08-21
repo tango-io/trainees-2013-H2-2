@@ -10,6 +10,8 @@ gem 'carrierwave'
 
 gem 'sitemap_generator'
 
+gem 'devise'
+
 gem 'haml'
 
 # Use SCSS for stylesheets

@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130815035941) do
+ActiveRecord::Schema.define(version: 20130821104429) do
 
   create_table "backers", force: true do |t|
-    t.string   "user_id"
-    t.string   "project_id"
     t.float    "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "project_id"
   end
 
   create_table "categories", force: true do |t|
@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(version: 20130815035941) do
   end
 
   create_table "comments", force: true do |t|
-    t.string   "user_id"
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "project_id"
+    t.integer  "user_id"
   end
 
   create_table "pages", force: true do |t|
@@ -51,17 +51,16 @@ ActiveRecord::Schema.define(version: 20130815035941) do
   end
 
   create_table "pledges", force: true do |t|
-    t.string   "project_id"
     t.string   "name"
     t.string   "description"
     t.float    "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
   end
 
   create_table "projects", force: true do |t|
     t.string   "name"
-    t.string   "user_id"
     t.string   "description"
     t.text     "content"
     t.string   "video"
@@ -78,6 +77,7 @@ ActiveRecord::Schema.define(version: 20130815035941) do
     t.datetime "updated_at"
     t.string   "picture"
     t.string   "location"
+    t.integer  "user_id"
   end
 
   create_table "subcategories", force: true do |t|
