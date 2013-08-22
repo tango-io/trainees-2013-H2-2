@@ -8,6 +8,8 @@ gem 'pg'
 
 gem 'carrierwave'
 
+gem 'jquery_datepicker'
+
 gem 'sitemap_generator'
 
 gem 'devise'
