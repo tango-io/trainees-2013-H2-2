@@ -45,6 +45,20 @@
           %br
           $1 minimum pledge
       %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
-      %p.funding-period Jul 19, 2013 - Aug 23, 2013
-%br
-%br
+      %p.funding-period 
+        = raw @project.created_at
+      %h2 Pledges
+      %ul 
+        - @pledges.each do |pledge|
+          %li.pledge
+            %p.bold 
+              Pledge $
+              = pledge.amount
+              or more
+            %p.bold 0 backers  
+            %p
+              = pledge.description
+            %p
+              Estimated delivery
+              = pledge.date
+              

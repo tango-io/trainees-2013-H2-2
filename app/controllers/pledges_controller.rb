@@ -8,6 +8,8 @@ before_action :set_project
 
  def create
    @pledge = @project.pledges.new(pledges_params)
+   @pledge.count = 0
+
    if @pledge.save 
      flash[:notice] = "Pledge has been created."
      redirect_to @project
@@ -22,6 +24,6 @@ before_action :set_project
  end
  
  def pledges_params
-  params.require(:pledge).permit(:name, :description, :project_id, :amount) 
+  params.require(:pledge).permit(:name, :description, :project_id, :amount, :date) 
  end
 end
