@@ -8,7 +8,7 @@ gem 'pg'
 
 gem 'carrierwave'
 
-gem 'jquery_datepicker'
+#gem 'jquery_datepicker'
 
 gem 'sitemap_generator'
 

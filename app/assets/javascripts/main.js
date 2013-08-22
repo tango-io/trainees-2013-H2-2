@@ -11,6 +11,5 @@ $(document).on('ready page:load', function(){
   angular.bootstrap(document, ['traineesTango']);
 });
 
- $(function() {
-$( "#datepicker" ).datepicker();
-});
+
+

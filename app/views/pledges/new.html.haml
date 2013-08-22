@@ -33,8 +33,8 @@
 
         %p
           Put date to deliver pledge in dd/mm/yyyy format
-          =f.label :date
-          =f.datepicker :date
+          =f.label "date"
+          =f.text_field :date, :id => "datepicker"
           =f.hidden_field :project_id, :value => @project.id
 
         =f.submit
