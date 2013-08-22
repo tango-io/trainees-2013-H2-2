@@ -8,7 +8,7 @@ class Login < ActiveRecord::Base
     @params = params
     @params.each{|key, value|
       if value.length == 0
-        #puts "key = #{key} and v= #{value}"
+        #key.paramete,Convert string to symbol-able in ruby
         @instance.errors.add(key.parameterize.underscore.to_sym,'Please enter all methods')           
       else
         @array_params << key

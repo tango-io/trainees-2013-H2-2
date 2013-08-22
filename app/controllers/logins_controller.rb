@@ -16,11 +16,14 @@ class LoginsController < ApplicationController
   def log_in
   end
   def login   
-    if Login.where("email = :x AND password = :y",{x: log_in_params[:email], y: log_in_params[:password]}).present?
-      puts "yes"
-    end
-      
-    binding.pry
+    @id = Login.where("email = :x AND password = :y",{x: log_in_params[:email], y: log_in_params[:password]})
+    unless @id[0]      
+      @login.errors.add("Incorrect".parameterize.underscore.to_sym,"User dont match please enter againg ")
+      render 'log_in'
+    else
+      create_session
+      redirect_to '/'
+    end      
   end
   private
   def log_up_params
@@ -31,5 +34,8 @@ class LoginsController < ApplicationController
   end
   def create_instance
     @login = Login.new
+  end
+  def create_session
+    session[:user_id] = @id      
   end
 end
