@@ -1,0 +1,6 @@
+= form_for @category do |f|
+  %fieldset
+    .form-edit
+      .control-group
+        = f.text_field :name, :placeholder => "Name Category"
+        = f.submit "Update", :class => "btn btn-default"
