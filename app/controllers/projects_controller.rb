@@ -11,9 +11,8 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    #date = @project.crated_at.split("-")
-    #@year = date[0]
-    #@month = date[1] 
+    @dead_line = @project.created_at + @project.period.days
+    @count = (@dead_line.to_date - Time.now.to_date).to_i 
     @pledges = Pledge.where(:project_id => @project.id)
   end
 
