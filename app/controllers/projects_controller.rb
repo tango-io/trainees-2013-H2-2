@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
     #date = @project.crated_at.split("-")
     #@year = date[0]
     #@month = date[1] 
-    @pledges = Pledge.where(:project_id == @project.id)
+    @pledges = Pledge.where(:project_id => @project.id)
   end
 
   def create
