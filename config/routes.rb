@@ -5,6 +5,7 @@ Kickstarter::Application.routes.draw do
     resources :comments
     resources :pledges
   end
+  resources :users
   resources :discovers
   resources :pages
   resources :subcategories
