@@ -1,16 +1,18 @@
 .menu li + li
-  border-left: 1px solid #d0d5cb
   strong
     display: block
     color: #0096bb
 
 .menu
-  width: 34%
-  li:first-child
-    width: 28%
-    a
-      color: #000000
-      font-weight: bold
+  li:nth-child(2)
+    border-left: 1px solid #d0d5cb
+    border-right: 1px solid #d0d5cb
+  li:first-child a
+    width: 75%
+    float: right
+    color: #000000
+    font-weight: bold
+  
   li:last-child
     border-right: 1px solid #d0d5cb
 
@@ -21,17 +23,18 @@
   li + li a
     color: #0096bb
 
-.navbar-form
+.navbar-search
   padding: 15px 0 0
+  width: 25%
 .search
   border-radius: 12px
   font-size: 12px
   height: auto
   padding: 4px 28px 4px 27px
-  width: 245px
+  width: 80%
+  margin-left: 5%
 
 .menu-right
   li.dropdown
     padding-top: 3%
 
- 
