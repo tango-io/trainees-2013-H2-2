@@ -1,7 +1,12 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
+  before_save :set_default_values
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  
+  def set_default_values
+     self.avatar = "no-img.png" unless self.avatar
+  end
+
 end

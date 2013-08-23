@@ -23,9 +23,24 @@
         %li
           = link_to 'Log in', new_user_session_path
       - else
-        %li 
-          = link_to current_user.email, '#'
-        %li
-          = link_to "Sign out", destroy_user_session_path, :method => :delete
+        %li.btn-group.dropdown
+          %button.btn.btn-default.btn-xs.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+            = image_tag(current_user.avatar, height: '20', width: '20')
+            -#%{current_user.email}
+            %span.caret
+          %ul.dropdown-menu{:role => "menu"}
+            %li
+              %a{:href => "#"} My profile
+            %li
+              %a{:href => "#"} My backer hostory
+            %li
+              %a{:href => "#"} My starred project
+            %li
+              %a{:href => "#"} Edit settings
+            %li
+              %a{:href => "#"} Find friends
+            %li.divider
+            %li
+              = link_to "Sign out", destroy_user_session_path, :method => :delete
         %li
           = link_to 'Pages', pages_path
