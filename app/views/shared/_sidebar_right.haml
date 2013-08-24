@@ -6,11 +6,13 @@
     - @categories.each do |category|
       %li
         %h3
-          = link_to "#{category.name}", category_path(category)
+          = link_to "#{category.name}", "javascript:void();", class: "name-category#{category.id}"
           = link_to 'Edit', edit_category_path(category.id), class: "btn btn-primary"
           = link_to 'Delete', category_path(category.id), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }
 
-        %ul
-        - category.subcategories.all.each do |subcategory|
-          %li 
-            = link_to subcategory.name, subcategory_path(subcategory)
+        %ul{style: "display: none;", class: "subcategories#{category.id}"}
+          - category.subcategories.all.each do |subcategory|
+            %li 
+              = link_to subcategory.name, subcategory_path(subcategory)
+= render :partial => "shared/toggle"
+
