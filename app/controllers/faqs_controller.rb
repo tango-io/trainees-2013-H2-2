@@ -2,7 +2,7 @@ class FaqsController < ApplicationController
 
   def index
     @project = Project.find(params[:project_id])
-    @faqs    = @project.faqs.where(project_id: [@project.id])
+    @faq    = @project.faqs.where(project_id: [@project.id])
   end
 
   def new
@@ -11,9 +11,9 @@ class FaqsController < ApplicationController
 
   def create
     @project = Project.find(params[:project_id])
-    @faqs = @project.comment.new.(faqs_params)
-    if @faqs.save
-      redirect_to projects_path
+    @faq = @project.faqs.build(faq_params)
+    if @faq.save
+      redirect_to :back
     else
       render 'new'
     end
