@@ -39,12 +39,14 @@
       days to go
       %br
       %br
+      %span
       .btn.btn2.btn-success
         %p
           Back this project
           %br
           $1 minimum pledge
       %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
+      - project_status(@count) 
       %p.funding-period 
         = raw @project.created_at
       %h2 Pledges
