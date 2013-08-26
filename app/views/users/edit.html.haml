@@ -1,20 +1,19 @@
-%ul.nav.nav-tabs
-  %li
-    = link_to 'Perfil', users_path(current_user.id)
-  %li.active
-    = link_to 'Account', edit_user_path(current_user.id)
-.navbar.row.usercontainer 
-  = form_for @user do |f|
-    .span4
-      %p Name
-      #{f.text_field :name}
-      %p Location 
-      #{f.text_field :location, :size => "20x10"}
-      %p Avatar
-      #{f.file_field :avatar}
-    .span4
-      %p Time zone 
-      #{f.time_zone_select(:time_zone, ActiveSupport::TimeZone.us_zones) }
-      %p Biography 
-      #{f.text_area :biography , :size => "10x10"}
-      = f.submit
+= form_for @user do |f|
+  .span4
+    %p 
+    =f.label :name, class: 'form-control' 
+    #{f.text_field :name, class: 'form-control'}
+    %p 
+    =f.label :location, class: 'form-control'
+    #{f.text_field :location, :size => "20x10", class: 'form-control'}
+    %p 
+    =f.label :avatar, class: 'form-control'
+    #{f.file_field :avatar}
+  .span4
+    %p 
+    =f.label :tome_zone, class: 'form-control'
+    #{f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones  }
+    %p Biography 
+    =f.label :biography, class: 'form-control'
+    #{f.text_area :biography , :size => "10x10", class: 'form-control'}
+    = f.submit

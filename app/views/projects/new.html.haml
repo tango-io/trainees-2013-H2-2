@@ -29,15 +29,15 @@
           =f.text_field :period, class: 'form-control'
         %p 
           =f.label :subcategory_id
-          \#{f.collection_select :subcategory_id , @subcategories, :id,:name, class: 'btn btn-default btn-sm dropdown-toggle' }
+          \#{f.collection_select :subcategory_id , @subcategories, :id,:name, class: 'form-control' }
       .col-lg-1
       .col-lg-3
         %p 
           =f.label :location
-          =f.text_field :location
+          =f.text_field :location, class: 'form-control'
         %p 
-          =f.label :imagen 
-          =f.file_field :picture
+          =f.label :imagen
+          =f.file_field :picture, class: 'form-control'
           =f.hidden_field :picture_cache
         %p 
           =f.label :video, 'Video (url)'
@@ -48,9 +48,5 @@
           =f.label :content
           =f.text_area :content, :size => "10x10", class: 'form-control'
         %p
-          =f.label :faqs, 'FAQS'
-          =f.text_area :faqs, :size => "10x10", class: 'form-control' 
           =f.hidden_field :user_id , :value => current_user.id    
           =f.submit 'Send', class: 'btn btn-primary dropdown-toggle align'
-        :javascript
-          $('#project_content').wysihtml5();
