@@ -1,4 +1,6 @@
-ActiveRecord::Schema.define(version: 20130822110903) do
+ActiveRecord::Schema.define(version: 20130821104429) do
+
+  enable_extension "plpgsql"
 
   create_table "backers", force: true do |t|
     t.float    "amount"

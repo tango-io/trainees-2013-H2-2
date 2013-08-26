@@ -7,6 +7,7 @@ class Project < ActiveRecord::Base
   has_many :comments
   has_many :pledges
   has_many :backers
+  has_many :faqs
 
 
   validates :name, :description, :content, :goal, :video, :period, presence: true

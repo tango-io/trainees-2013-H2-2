@@ -1,0 +1,10 @@
+= form_for @project.faqs.build, url: "/projects/#{@project.id}/faqs" do |x| 
+  %p
+    = x.label :question
+    = x.text_field :question, class: 'form-control'
+  %p
+    = x.label :answer
+    = x.text_area :answer, :size => "10x10", class: 'form-control'
+  %p
+    = x.submit 'Save', class: 'btn btn-primary dropdown-toggle align'
+

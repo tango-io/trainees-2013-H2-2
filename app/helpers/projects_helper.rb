@@ -8,3 +8,4 @@ module ProjectsHelper
     return cadena.html_safe 
   end   
 end
+
