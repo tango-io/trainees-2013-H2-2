@@ -35,15 +35,12 @@
       = raw @project.goal
       goal
       %h3 
-        = raw @project.period
+        = @count
       days to go
       %br
       %br
-      .btn.btn2.btn-success
-        %p
-          Back this project
-          %br
-          $1 minimum pledge
+      %span
+      = project_status(@count)
       %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
       %p.funding-period 
         = raw @project.created_at

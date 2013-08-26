@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-1.9.1.js
 //= require jquery_ujs
 //= require jquery-ui.js
 //= require turbolinks
