@@ -24,13 +24,14 @@
       %div.project-faqs
         %h3.faq-title FAQ
         %br
-          - @faqs.each do |f|
-            .panel
-              .panel-heading
-                = f.question
-              %br/
-              .panel-body
-                = f.answer
+          -if @faqs != nil
+            - @faqs.each do |f|
+              .panel
+                .panel-heading
+                  = f.question
+                %br/
+                .panel-body
+                  = f.answer
         %p.message
           - if current_user != nil 
             - if @project.user_id == current_user.id 
