@@ -1,6 +1,24 @@
 .col-lg-3.sidebar-right
   %ul
     %li
+      %h3 Features
+      %li
+        %ul
+          %li
+            = link_to "Staff Picks"
+          %li  
+            = link_to "Popular"
+          %li  
+            = link_to "Recently Launched"
+          %li  
+            = link_to "Ending Soon"
+          %li  
+            = link_to "Small Projects"
+          %li  
+            = link_to "Most Funded"
+          %li  
+            = link_to "Curated Pages"
+    %li
       %h3 Categories
       = link_to '', new_category_path, class: "add-category"
     - @categories.each do |category|
