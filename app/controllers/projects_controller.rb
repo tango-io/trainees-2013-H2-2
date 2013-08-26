@@ -11,8 +11,8 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    #@dead_line = @project.created_at + @project.period.days
     @count = ((@project.created_at + @project.period.days).to_date - Time.now.to_date).to_i 
+    @count = 0 unless @count > 0 
     @pledges = Pledge.where(:project_id => @project.id)
   end
 
@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
      @project.video = format_video(@project.video)
     end
     if @project.save 
-      render "show"
+      redirect_to @project
     else
       render "new"
     end
@@ -56,12 +56,12 @@ class ProjectsController < ApplicationController
   end
  
 
-
+private
   def format_video(video)
     video_parts = video.split('=')
     video_format = "//www.youtube.com/embed/" + video_parts[1]
   end
-private
+
   
   def project_params
     params.require(:project).permit(:name,:description, :content, :picture, :video, :goal, :period, :subcategory_id, :location)
@@ -70,5 +70,7 @@ private
   def project_params_update
     params.require(:project).permit(:description, :content, :picture, :subcategory_id)
   end
+
+
 
 end
