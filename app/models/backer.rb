@@ -1,3 +1,4 @@
 class Backer < ActiveRecord::Base
-  has_one :pledges
+  has_one :pledge
+  belongs_to :project
 end
