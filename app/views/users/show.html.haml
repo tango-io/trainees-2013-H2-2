@@ -1,20 +1,21 @@
-%div#running-board-wrap
-  .container#running-board
-    .NS_users__profile
-      #profile_avatar
-        %img.avatar-medium{:alt => "Fb_profile_picture.medium", :height => "160", :src => "#{current_user.avatar}", :width => "160"}/
-      #profile_bio
-        %h2
-          = current_user.name
-          %span.creator_tag.highlight
-        %p.normal_type
-          %span.backed
-            Backed
-            0
-            projects
-          %span.divider
-            ·
-          %span.joined
-            Joined
-            =current_user.created_at
+.main-content
+  %div#running-board-wrap
+    .container#running-board
+      .NS_users__profile
+        #profile_avatar
+          %img.avatar-medium{:alt => "Fb_profile_picture.medium", :height => "160", :src => "#{current_user.avatar}", :width => "160"}/
+        #profile_bio
+          %h2
+            = current_user.name
+            %span.creator_tag.highlight
+          %p.normal_type
+            %span.backed
+              Backed
+              0
+              projects
+            %span.divider
+              ·
+            %span.joined
+              Joined
+              =current_user.created_at
 
