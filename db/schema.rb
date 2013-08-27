@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20130827143240) do
     t.datetime "updated_at"
     t.integer  "project_id"
     t.integer  "user_id"
+    t.boolean  "approved",   default: false
   end
 
   create_table "faqs", force: true do |t|
@@ -64,9 +65,9 @@ ActiveRecord::Schema.define(version: 20130827143240) do
     t.float    "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
     t.string   "date"
     t.integer  "count"
-    t.integer  "project_id"
   end
 
   create_table "projects", force: true do |t|
