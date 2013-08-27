@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
   before_action :load_general_vars
   
   def load_general_vars
-    @categories = Category.all
-    @sitemaps = Page.all
+   @categories = Category.order("name ASC")
+   @sitemaps = Page.all
   end
 
 end
