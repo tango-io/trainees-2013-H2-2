@@ -24,6 +24,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     category = Subcategory.find(" #{@project.subcategory_id}")
     @project.category_id = category.category_id
+    @project.hit_counter = 0
     if (@project.video =~ /^(https?:\/\/)?(www\.)?youtube.com\/watch\?v=([a-z0-9-]+)/i) 
      @project.video = format_video(@project.video)
     end
