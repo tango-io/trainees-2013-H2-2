@@ -1,5 +1,4 @@
-ActiveRecord::Schema.define(version: 20130821104429) do
-
+ActiveRecord::Schema.define(version: 20130827143240) do
   enable_extension "plpgsql"
 
   create_table "backers", force: true do |t|
@@ -29,14 +28,6 @@ ActiveRecord::Schema.define(version: 20130821104429) do
     t.datetime "updated_at"
     t.integer  "project_id"
     t.integer  "user_id"
-  end
-
-  create_table "faqs", force: true do |t|
-    t.integer  "project_id"
-    t.string   "question"
-    t.text     "answer"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "pages", force: true do |t|
@@ -77,6 +68,7 @@ ActiveRecord::Schema.define(version: 20130821104429) do
     t.string   "picture"
     t.string   "location"
     t.integer  "user_id"
+    t.integer  "hit_counter"
   end
 
   create_table "subcategories", force: true do |t|

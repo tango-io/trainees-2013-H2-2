@@ -7,5 +7,12 @@ module ProjectsHelper
    end
     return cadena.html_safe 
   end   
+  
+  def project_visit (id)
+    project = Project.find(id)
+    counter = project.hit_counter + 1
+    project.update(:hit_counter => counter)
+  end
+
 end
 
