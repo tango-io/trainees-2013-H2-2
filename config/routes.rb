@@ -7,6 +7,7 @@ Kickstarter::Application.routes.draw do
     resources :faqs
   end
   resources :users
+  get 'discovers/popular', to: 'discovers#popular'
   resources :discovers
   resources :pages
   resources :subcategories

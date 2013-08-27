@@ -60,11 +60,11 @@ class ProjectsController < ApplicationController
   end
  
 private
+
   def format_video(video)
     video_parts = video.split('=')
     video_format = "//www.youtube.com/embed/" + video_parts[1]
   end
-
   def project_params
     params.require(:project).permit(:name,:description, :content, :picture, :video, :goal, :period, :subcategory_id, :location, :user_id )
   end

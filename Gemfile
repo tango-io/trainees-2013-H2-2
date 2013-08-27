@@ -40,6 +40,20 @@ gem 'jbuilder', '~> 1.2'
 gem 'puma'
 
 gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+
+gem 'pry'
+
+
+group :test do
+  gem 'pry'
+  gem 'capybara', github: 'jnicklas/capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'faker' 
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
