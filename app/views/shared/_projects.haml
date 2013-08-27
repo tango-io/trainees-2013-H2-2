@@ -2,19 +2,19 @@
   = @name_section
 %p.subtitle 
   = @subtitle
-.col-lg-9
-  %ul
-    %h3 Staff Picks
-    - @projects_section.each do |project|
-      %li
-        %a{:href => "#{project_path(project)}"}
-          .project-bg
-            .project-wrap
-              =image_tag "#{project.picture}", class: 'img-project img-responsive'
-              %h5 
-                %strong #{project.name}
-                %span By #{project.user_id}
-              %p #{project.description}
-              .progress
-                #{project.period}
-
+#content.col-lg-9
+  -@hash_filter_project.each do |key , value|
+    %ul.section
+      %h3 #{key}
+      -value.each do |project|
+        %li
+          %a{:href => "#{project_path(project)}"}
+            .project-bg
+              .project-wrap
+                =image_tag "#{project.picture}", class: 'img-project img-responsive'
+                %h5
+                  %strong #{project.name}
+                  %span By #{project.user_id}
+                %p #{project.description}
+                .progress
+                  #{project.period}
