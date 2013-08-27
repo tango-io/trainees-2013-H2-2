@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_project_id
   def index
-    @comments = Comment.joins(:user).where(:project_id => @project.id).order("created_at DESC")
+    @comments = Comment.approved(@project.id)
   end
   def create
     @comment = Comment.new
