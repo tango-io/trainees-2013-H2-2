@@ -50,6 +50,7 @@
         %p
           =f.label :faqs, 'FAQS'
           =f.text_area :faqs, :size => "10x10", class: 'form-control' 
+          =f.hidden_field :user_id , :value => current_user.id    
           =f.submit 'Send', class: 'btn btn-primary dropdown-toggle align'
         :javascript
           $('#project_content').wysihtml5();

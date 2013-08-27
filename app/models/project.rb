@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
 
   mount_uploader :picture, PictureUploader   
+  belongs_to :user
   belongs_to :category
   belongs_to :subcategory
   has_one :city
