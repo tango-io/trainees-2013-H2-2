@@ -13,7 +13,7 @@ class DiscoversController < ApplicationController
     @hash_filter_project = Hash.new
     @categories.select('id,name').each{
       |id|
-      query = id.projects.order("created_at DESC").take(3)
+      query = id.projects.order("hit_counter DESC").take(3)
       if !query.empty?
         @hash_filter_project["#{id.name}"] = query
       end
