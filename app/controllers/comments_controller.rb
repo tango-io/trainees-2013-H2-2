@@ -4,15 +4,15 @@ class CommentsController < ApplicationController
     @comments = Comment.approved(@project.id)
   end
   def create
-    @comment = Comment.new
-    @comment.user_id    = current_user.id
-    @comment.project_id = @project.id
-    @comment.comment    = params[:comment][:comment]
+    @comment = @project.comments.new(comment_params)
     @comment.save
     redirect_to :back
   end
   private
   def set_project_id
     @project = Project.find(params[:project_id])
+  end
+  def comment_params
+    params.require(:comment).permit(:project_id,:comment).merge(user_id: current_user.id)
   end
 end
