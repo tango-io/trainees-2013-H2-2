@@ -8,18 +8,9 @@
 %section.container-2.show-project
   .wrap-section
     .content-project.col-lg-8
-      %h2 Select your reward:
-      %ul 
-        - @pledges.each do |pledge|
-          %li.pledge
-            %p.bold 
-              Pledge $
-              = pledge.amount
-              or more
-            %p.bold 0 backers  
-            %p
-              = pledge.description
-            %p
-              Estimated delivery
-              = pledge.date
-
+      %h2 Alrighty!
+      %h5 Enter your pledge amount
+      =form_for [@project, @backer] do |f|
+        %h3 Select your reward:
+        =f.radio_button(:project_id, 'No reward')
+        =f.label "No reward"
