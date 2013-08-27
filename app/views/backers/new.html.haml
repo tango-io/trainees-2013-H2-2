@@ -1,0 +1,25 @@
+%section.container
+  %h3#title
+    = raw @project.name
+  %h5#small-title
+    by
+    = @project.user.name
+%br
+%section.container-2.show-project
+  .wrap-section
+    .content-project.col-lg-8
+      %h2 Select your reward:
+      %ul 
+        - @pledges.each do |pledge|
+          %li.pledge
+            %p.bold 
+              Pledge $
+              = pledge.amount
+              or more
+            %p.bold 0 backers  
+            %p
+              = pledge.description
+            %p
+              Estimated delivery
+              = pledge.date
+
