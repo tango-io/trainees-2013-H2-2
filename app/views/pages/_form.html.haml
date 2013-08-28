@@ -4,7 +4,8 @@
 %br
 %br
 = form_for @page do |f|
-  = f.text_field :title
+  =f.label :title, class: 'form-control'
+  = f.text_field :title, class: 'form-control'
   %br
   = f.text_area :content, size: '20x50'
   = f.submit 'Save', :class => "btn btn-primary dropdown-toggle align"
