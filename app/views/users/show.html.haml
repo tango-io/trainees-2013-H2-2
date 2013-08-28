@@ -3,7 +3,7 @@
     .container#running-board
       .NS_users__profile
         #profile_avatar
-          %img.avatar-medium{:alt => "Fb_profile_picture.medium", :height => "160", :src => "#{current_user.avatar}", :width => "160"}/
+          %img.img-responsive{:src => "#{current_user.avatar}"}/
         #profile_bio
           %h2
             = current_user.name
