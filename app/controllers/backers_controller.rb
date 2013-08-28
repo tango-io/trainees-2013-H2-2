@@ -13,6 +13,8 @@ class BackersController < ApplicationController
    @backer = @project.backers.new(backers_params)
    if @backer.save
      redirect_to @project
+   else
+     render "new"
    end
  end
 

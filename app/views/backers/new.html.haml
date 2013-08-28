@@ -11,6 +11,16 @@
       %h2 Alrighty!
       %h5 Enter your pledge amount
       =form_for [@project, @backer] do |f|
+        = if @backer.errors.any?
+          .error_explanation
+            %h2 
+              Prohibited this project from being saved:
+              = pluralize(@backer.errors.count, "error") 
+            %ul 
+            = @backer.errors.full_messages.each do |msg|
+              %li 
+                = msg
+
         =f.text_field :amount
         %h3 Select your reward:
         =f.radio_button(:pledge_id, 0)
