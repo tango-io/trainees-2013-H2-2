@@ -1,19 +1,27 @@
-= form_for @user do |f|
-  .span4
-    %p 
-    =f.label :name, class: 'form-control' 
-    #{f.text_field :name, class: 'form-control'}
-    %p 
-    =f.label :location, class: 'form-control'
-    #{f.text_field :location, :size => "20x10", class: 'form-control'}
-    %p 
-    =f.label :avatar, class: 'form-control'
-    #{f.file_field :avatar}
-  .span4
-    %p 
-    =f.label :tome_zone, class: 'form-control'
-    #{f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones  }
-    %p Biography 
-    =f.label :biography, class: 'form-control'
-    #{f.text_area :biography , :size => "10x10", class: 'form-control'}
-    = f.submit
+.running-board-edit
+  .running-board
+    %h2 Edit settings
+.container.content.content-into
+  = form_for @user do |f|
+    .col-lg-6
+      =f.label :name, class: 'form-control' 
+      #{f.text_field :name, class: 'form-control'}
+      %br
+      =f.label :location, class: 'form-control'
+      #{f.text_field :location, :size => "20x10", class: 'form-control'}
+      %br
+      =f.label :tome_zone, class: 'form-control'
+      #{f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones  }
+      %br
+    .col-lg-2
+      =f.label :avatar, class: 'form-control'
+      %img.img-responsive{:src => "#{current_user.avatar}"}/
+      #{f.file_field :avatar}
+    .col-lg-8
+      %br
+      %br
+      =f.label :biography, class: 'form-control'
+      #{f.text_area :biography , :size => "10x10", class: 'form-control'}
+    .col-lg-8
+      %br
+      = f.submit
