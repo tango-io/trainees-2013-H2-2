@@ -27,8 +27,17 @@ class DiscoversController < ApplicationController
     @name_section = "Recently Updates"
     @hash_filter_project = Hash.new
     @hash_filter_project[''] = Project.order("updated_at DESC")
-
-
+  end
+  
+  def endingsoon
+    @subtitle = "Time is running out! Last chance to get in before the deadline is reached."
+    @name_section = "Ending Soon"
+    @hash_filter_project = Hash.new
+    Project.all.order("created_at ASC").each{
+      |p|
+      puts p.created_at
+    }
+    binding.pry
   end
 
 end

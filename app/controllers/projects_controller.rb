@@ -22,6 +22,10 @@ class ProjectsController < ApplicationController
   def create
     @subcategories = Subcategory.all
     @project = Project.new(project_params)
+    @newproject = Project.last
+    format_period = @newproject.created_at + params["project"]["period"].to_i.days
+    Project.update(@newproject.id,period:format_period )
+    binding.pry
     category = Subcategory.find(" #{@project.subcategory_id}")
     @project.category_id = category.category_id
     @project.hit_counter = 0

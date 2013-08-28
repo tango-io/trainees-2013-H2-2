@@ -17,4 +17,7 @@
                   %span By #{project.user_id}
                 %p #{project.description}
                 .progress
-                  #{project.period}
+                  - unless(@period)
+                    #{project.period}
+                  - else
+                    - @period
