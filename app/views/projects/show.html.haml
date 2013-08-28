@@ -53,7 +53,10 @@
       %br
       %br
       %span
-      = project_status(status(@project.period))
+      - if status(@project.period) != false
+        %a.btn.btn2.btn-success{:href => new_project_backer_path(@project)}
+          %p Back this project
+          %p $1 minimium pledge
       %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
       %p.funding-period 
         = raw @project.created_at

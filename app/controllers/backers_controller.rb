@@ -7,7 +7,6 @@ class BackersController < ApplicationController
 
  def new
   @backer = @project.backers.new
-  @pledges = @project.pledges.where(:project_id => @project.id)
  end
 
  private

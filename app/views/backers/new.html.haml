@@ -13,5 +13,11 @@
       =form_for [@project, @backer] do |f|
         =f.text_field :amount
         %h3 Select your reward:
-        =f.radio_button(:project_id, 'No reward')
+        =f.radio_button(:pledge_id, 0)
         =f.label "No reward"
+        %br
+        -@project.pledges.each do |r|
+          %p
+            =f.radio_button(:pledge_id, r.id)
+            %b=r.name
+            =r.description
