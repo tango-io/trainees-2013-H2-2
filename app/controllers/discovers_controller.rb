@@ -1,4 +1,5 @@
 class DiscoversController < ApplicationController
+
   def index
     @name_section = 'Discover Projects'
     @subtitle = 'Passion, ideas, and ambition abound. Start exploring!'    
@@ -7,6 +8,7 @@ class DiscoversController < ApplicationController
     @hash_filter_project["Recently Successfully Funded"] = Project.order("created_at DESC").take(6)
     @hash_filter_project["Recent Updates"] = Project.order("updated_at DESC").take(3)
   end
+
   def popular
     @name_section = "Population"
     @subtitle = "These projects are generating the most buzz this week, both on Kickstarter and off."
@@ -18,6 +20,15 @@ class DiscoversController < ApplicationController
         @hash_filter_project["#{id.name}"] = query
       end
     }
+  end
+
+  def recently
+    @subtitle = "The newest and freshest projects on Kickstarter!"
+    @name_section = "Recently Updates"
+    @hash_filter_project = Hash.new
+    @hash_filter_project[''] = Project.order("updated_at DESC")
+
 
   end
+
 end
