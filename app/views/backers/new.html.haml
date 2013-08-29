@@ -10,7 +10,7 @@
     .content-project.col-lg-8{"ng-controller" => "backersController" }
       %h2 Alrighty!
       %h5 Enter your pledge amount
-      =form_for [@project, @backer] do |f|
+      =form_for [@project, @backer] do |f|                               
         = if @backer.errors.any?
           .error_explanation
             %h2 
@@ -24,6 +24,7 @@
         -#=f.text_field :amount
         %input{"ng-model" => "amount", :type => "text", :name => "backer[amount]"}
         %h3 Select your reward:
+        %p#aviable_message 
         =f.radio_button(:pledge_id, 0) 
         =f.label "No reward"
         %br
