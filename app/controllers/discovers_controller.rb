@@ -33,11 +33,7 @@ class DiscoversController < ApplicationController
     @subtitle = "Time is running out! Last chance to get in before the deadline is reached."
     @name_section = "Ending Soon"
     @hash_filter_project = Hash.new
-    Project.all.order("created_at ASC").each{
-      |p|
-      puts p.created_at
-    }
-    binding.pry
+    @hash_filter_project[''] = Project.all.order("period ASC")
   end
-
 end
+
