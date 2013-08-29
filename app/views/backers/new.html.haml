@@ -24,7 +24,8 @@
         %input{"ng-model" => "amount", :type => "text", :name => "backer[amount]"}
         %h3 Select your reward:
         %p#aviable_message 
-        =f.radio_button(:pledge_id, 0) 
+        %input{"ng-click" => "noreward()", :type => "radio", :name => "backer[pledge_id]", :value => 0}                       
+        -#=f.radio_button(:pledge_id, 0) 
         =f.label "No reward"
         %br
         -@project.pledges.each do |r|
