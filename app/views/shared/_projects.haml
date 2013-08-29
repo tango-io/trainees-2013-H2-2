@@ -17,4 +17,4 @@
                   %span By #{project.user_id}
                 %p #{project.description}
                 .progress
-                  #{project.period}
+                  =convert_date(project.period)
