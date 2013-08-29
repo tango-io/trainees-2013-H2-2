@@ -13,8 +13,6 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @count = ((@project.created_at + @project.period.days).to_date - Time.now.to_date).to_i 
-    @count = 0 unless @count > 0 
     @pledges = Pledge.where(:project_id => @project.id)
     @faqs    = Faq.where(project_id: [params[:id]])
   end
@@ -22,17 +20,16 @@ class ProjectsController < ApplicationController
   def create
     @subcategories = Subcategory.all
     @project = Project.new(project_params)
-    @newproject = Project.last
-    format_period = @newproject.created_at + params["project"]["period"].to_i.days
-    Project.update(@newproject.id,period:format_period )
-    binding.pry
-    category = Subcategory.find(" #{@project.subcategory_id}")
+    category = Subcategory.find("#{@project.subcategory_id}")
     @project.category_id = category.category_id
     @project.hit_counter = 0
     if (@project.video =~ /^(https?:\/\/)?(www\.)?youtube.com\/watch\?v=([a-z0-9-]+)/i) 
      @project.video = format_video(@project.video)
     end
     if @project.save 
+      @newproject = Project.last
+      format_period = @newproject.created_at + params["project"]["period"].to_i.days
+      Project.update(@newproject.id,period:format_period )
       redirect_to @project
     else
       render "new"
