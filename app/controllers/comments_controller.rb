@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_project_id
   def index
-    @comments = Comment.approved(@project.id)
+    @comments = Comment.approved_comments(@project.id)
   end
   def create
     @comment = @project.comments.new(comment_params)
