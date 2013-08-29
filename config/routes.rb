@@ -10,6 +10,7 @@ Kickstarter::Application.routes.draw do
   get 'discovers/popular', to: 'discovers#popular'
   get 'discovers/recently',to: 'discovers#recently'
   get 'discovers/endingsoon', to: 'discovers#endingsoon'
+  get 'discovers/smallprojects', to: 'discovers#smallprojects'
   resources :discovers
   resources :pages
   resources :subcategories

@@ -35,5 +35,12 @@ class DiscoversController < ApplicationController
     @hash_filter_project = Hash.new
     @hash_filter_project[''] = Project.all.order("period ASC")
   end
+
+  def smallprojects
+    @subtitle = "Small is the new big! These projects are raising $1,000 or less in 30 days or less (and have a video!)."
+    @name_section = "Small Projects"
+    @hash_filter_project = Hash.new
+    @hash_filter_project[''] = Project.where("goal < 20000")
+  end
 end
 
