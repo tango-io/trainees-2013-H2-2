@@ -49,12 +49,11 @@
       = raw @project.goal
       goal
       %h3 
-        = @count
-      days to go
+        = convert_date(@project.period)
       %br
       %br
       %span
-      = project_status(@count)
+      = project_status(status(@project.period))
       %p This project will only be funded if at least $3,000 is pledged by Friday Aug 23, 11:00pm EDT. 
       %p.funding-period 
         = raw @project.created_at
