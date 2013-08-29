@@ -17,4 +17,5 @@ Kickstarter::Application.routes.draw do
   resources :pages
   resources :subcategories
   resources :categories
+  resources :messages
 end
