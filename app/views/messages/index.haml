@@ -1,0 +1,11 @@
+%h2 Non approved comments
+-@messages.each do |message| 
+  = form_for :comment do |f|
+    %ul 
+      %li #{message.user.name} commented on
+      %li #{message.project.name}
+      %li #{message.comment}
+      %li #{time_ago_in_words(message.created_at)} ago
+      = f.submit 'Approve'
+    %hr
+   
