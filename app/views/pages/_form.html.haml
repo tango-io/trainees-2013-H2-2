@@ -1,0 +1,11 @@
+%script{:src => "http://tinymce.cachefly.net/4.0/tinymce.min.js"}
+:javascript
+  tinymce.init({selector:'textarea'});
+%br
+%br
+= form_for @page do |f|
+  =f.label :title, class: 'form-control'
+  = f.text_field :title, class: 'form-control'
+  %br
+  = f.text_area :content, size: '20x50'
+  = f.submit 'Save', :class => "btn btn-primary dropdown-toggle align"
