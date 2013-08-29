@@ -8,7 +8,6 @@
 %section.container-2.show-project
   .wrap-section
     .content-project.col-lg-8{"ng-controller" => "backersController" }
-      %button{"ng-click" => "validate()" }
       %h2 Alrighty!
       %h5 Enter your pledge amount
       =form_for [@project, @backer] do |f|
@@ -42,4 +41,3 @@
         =f.hidden_field :project_id, :value => @project.id
         =f.hidden_field :user_id, :value => current_user.id
         =f.submit :value => "Send"
-        %button{"ng-click" => "console.log('holiizzz')"}

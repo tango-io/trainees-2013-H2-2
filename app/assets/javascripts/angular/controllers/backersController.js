@@ -7,7 +7,7 @@ $scope.validate = function(){
   amount = $("input[name='backer[amount]']");
   amount = parseInt(amount.val());
   if (pledge > amount) {
-    console.log("no se puede wey!!!");
+    alert("no se puede wey!!!");
   }
  };
 
