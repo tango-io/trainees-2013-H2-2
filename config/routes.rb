@@ -5,6 +5,7 @@ Kickstarter::Application.routes.draw do
     resources :comments
     resources :pledges
     resources :faqs
+    resources :backers
   end
   resources :users
   get 'discovers/popular', to: 'discovers#popular'

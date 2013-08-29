@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827143240) do
+ActiveRecord::Schema.define(version: 20130828224743) do
 
   create_table "backers", force: true do |t|
     t.float    "amount"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130827143240) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "project_id"
+    t.integer  "pledge_id"
   end
 
   create_table "categories", force: true do |t|
@@ -65,9 +66,9 @@ ActiveRecord::Schema.define(version: 20130827143240) do
     t.float    "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "project_id"
     t.string   "date"
     t.integer  "count"
+    t.integer  "project_id"
   end
 
   create_table "projects", force: true do |t|
@@ -76,7 +77,7 @@ ActiveRecord::Schema.define(version: 20130827143240) do
     t.text     "content"
     t.string   "video"
     t.float    "goal"
-    t.integer  "period"
+    t.string   "period"
     t.string   "coments"
     t.string   "category_id"
     t.string   "subcategory_id"
@@ -90,6 +91,7 @@ ActiveRecord::Schema.define(version: 20130827143240) do
     t.string   "location"
     t.integer  "user_id"
     t.integer  "hit_counter"
+    t.integer  "countvisit"
   end
 
   create_table "subcategories", force: true do |t|
@@ -100,8 +102,8 @@ ActiveRecord::Schema.define(version: 20130827143240) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",           null: false
+    t.string   "encrypted_password",     default: "",           null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -113,11 +115,11 @@ ActiveRecord::Schema.define(version: 20130827143240) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
-    t.string   "avatar"
     t.string   "name"
     t.string   "location"
     t.string   "time_zone"
     t.text     "biography"
+    t.string   "avatar",                 default: "no-img.png"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

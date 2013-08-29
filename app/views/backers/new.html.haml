@@ -1,0 +1,41 @@
+%section.container
+  %h3#title
+    = raw @project.name
+  %h5#small-title
+    by
+    = @project.user.name
+%br   
+%section.container-2.show-project
+  .wrap-section
+    .content-project.col-lg-8{"ng-controller" => "backersController" }
+      %h2 Alrighty!
+      %h5 Enter your pledge amount
+      =form_for [@project, @backer] do |f|                               
+        = if @backer.errors.any?
+          .error_explanation
+            %h2 
+              Prohibited this project from being saved:
+              = pluralize(@backer.errors.count, "error") 
+            %ul 
+            = @backer.errors.full_messages.each do |msg|
+              %li 
+                = msg
+
+        %input{"ng-model" => "amount", :type => "text", :name => "backer[amount]"}
+        %h3 Select your reward:
+        %p#aviable_message 
+        %input{"ng-click" => "noreward()", :type => "radio", :name => "backer[pledge_id]", :value => 0}                       
+        -#=f.radio_button(:pledge_id, 0) 
+        =f.label "No reward"
+        %br
+        -@project.pledges.each do |r|
+          %p
+            %input{"ng-click" => "validate(#{r.id})", :type => "radio", :name => "backer[pledge_id]", :value => r.id }
+            %b{"name" => "#{r.id}"}
+              =r.amount
+            %b
+              =r.name
+            =r.description
+        =f.hidden_field :project_id, :value => @project.id
+        =f.hidden_field :user_id, :value => current_user.id
+        =f.submit :value => "Send"
