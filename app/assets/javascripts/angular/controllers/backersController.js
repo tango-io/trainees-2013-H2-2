@@ -1,15 +1,20 @@
 traineesTango.controller('backersController', ['$scope','$http', function($scope, $http){
   $scope.message = "";
 
-$scope.validate = function(){
-  pledge = $("b[data-amount]");
+$scope.validate = function(id){
+  console.log("hola");
+  pledge = $("b[name='"+id+"']");
   pledge = parseInt(pledge.html());
   amount = $("input[name='backer[amount]']");
   amount = parseInt(amount.val());
   if (pledge > amount) {
-    $("#aviable_message").html("no se puede wey!!!");
-    $("input[name='backer[pledge_id]']").val([]);
+
+    $("#aviable_message").html("pledge is no aviable").css("background-color", "red");
+    $("input[name='backer[pledge_id]']").val([]); 
   }
+  else {
+    $("#aviable_message").html("pledge is aviable").css("background-color", "green");
+   }
  };
 
   

@@ -21,7 +21,6 @@
               %li 
                 = msg
 
-        -#=f.text_field :amount
         %input{"ng-model" => "amount", :type => "text", :name => "backer[amount]"}
         %h3 Select your reward:
         %p#aviable_message 
@@ -30,11 +29,8 @@
         %br
         -@project.pledges.each do |r|
           %p
-            %input{"ng-click" => "validate()", :type => "radio", :name => "backer[pledge_id]", :value => r.id}
-            -#=f.radio_button(:pledge_id, r.id)
-
-              
-            %b{"data-amount" => "amount"}
+            %input{"ng-click" => "validate(#{r.id})", :type => "radio", :name => "backer[pledge_id]", :value => r.id }
+            %b{"name" => "#{r.id}"}
               =r.amount
             %b
               =r.name
