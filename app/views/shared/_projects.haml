@@ -17,7 +17,4 @@
                   %span By #{project.user_id}
                 %p #{project.description}
                 .progress
-                  - unless(@period)
-                    #{project.period}
-                  - else
-                    - @period
+                  =convert_date(project.period)
