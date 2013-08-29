@@ -33,7 +33,7 @@ class DiscoversController < ApplicationController
     @subtitle = "Time is running out! Last chance to get in before the deadline is reached."
     @name_section = "Ending Soon"
     @hash_filter_project = Hash.new
-    @hash_filter_project[''] = Project.all.order("period ASC")
+    @hash_filter_project[''] = Project.order("period ASC")
   end
 
   def smallprojects
@@ -41,6 +41,13 @@ class DiscoversController < ApplicationController
     @name_section = "Small Projects"
     @hash_filter_project = Hash.new
     @hash_filter_project[''] = Project.where("goal < 20000")
+  end
+  
+  def mostfunded
+    @subtitle = "The most funded projects in Kickstarter history (since 2009!"
+    @name_section = "Most funded"
+    @hash_filter_project = Hash.new
+    @hash_filter_project[''] = Project.where("goal > 20000").order("goal DESC")
   end
 end
 
