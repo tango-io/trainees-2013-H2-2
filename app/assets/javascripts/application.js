@@ -14,7 +14,8 @@
 //= require jquery-1.9.1.js
 //= require jquery_ujs
 //= require jquery-ui.js
-//= require libs/angular.min.js
+//= require libs/angular.min.js 
+//= require bootstrap.js
 //= require main.js
 //= require_tree .
 //= require_self
