@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery-ui.js
 //= require turbolinks
+//= require libs/angular.min.js
 //= require main.js
 //= require_tree .
 //= require_self
