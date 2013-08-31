@@ -3,8 +3,17 @@ class DiscoversController < ApplicationController
     @name_section = 'Discover Projects'
     @subtitle = 'Passion, ideas, and ambition abound. Start exploring!'
     @category = Category.first
-    @categories = Category.order("created_at") 
     @projects_section = @category.projects.first(3)
-    @subcategories_of = @category.subcategories.all
+    
+    hash = Hash.new
+    @categories.order("created_at ASC").each{
+      |cat|
+      hash[cat.name]=cat.subcategories
+    }
+
+    respond_to do |format|
+      format.json  { render json: hash }
+      format.html { render html: @categories }
+    end
   end
 end

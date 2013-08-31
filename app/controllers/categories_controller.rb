@@ -21,6 +21,10 @@ class CategoriesController < ApplicationController
     @name_section = @category.name
     @projects_section = @category.projects.first(3)
     @categories = Category.order("created_at")
+    respond_to do |format|
+      format.json { render json: @categories }
+      format.html { render html: @categories }
+    end
   end
 
   def edit
