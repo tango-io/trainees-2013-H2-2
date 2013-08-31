@@ -1,16 +1,18 @@
-.col-lg-3.sidebar-right
+.col-lg-3.sidebar-right(ng-controller="editCategoryController" ng-init="showCategories()")
+  .categories
+    %h3 Categories
+    = link_to '', new_category_path, class: "add-category"
   %ul
-    %li
-      %h3 Categories
-      = link_to '', new_category_path, class: "add-category"
-    - @categories.each do |category|
-      %li
-        %h3
-          = link_to "#{category.name}", category_path(category)
-          = link_to 'Edit', edit_category_path(category.id), class: "btn btn-primary"
-          = link_to 'Delete', category_path(category.id), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }
-
-        %ul
-        - category.subcategories.all.each do |subcategory|
-          %li 
-            = link_to subcategory.name, subcategory_path(subcategory)
+    %li(ng-repeat="(key, category) in categories")
+      %h3(ng-hide="editorEnabled")
+        = link_to "{{key}}", "/categories/{{category[0].category_id}}"
+        = link_to 'Edit', "javascript:void();", class: "btn btn-primary", "ng-click" => "enableEditor()"
+        = link_to 'Delete', "/categories/{{category.id}}", class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }
+      %div(ng-show="editorEnabled")
+        %input(ng-model="editCategory" placeholder="{{key}}")
+        = link_to "Save", "javascript:void();", "ng-click" => "save()"
+        or
+        = link_to "Cancel", "javascript:void();", "ng-click" => "disableEditor()"
+      %ul
+        %li(ng-repeat="subcategory in category")
+          = link_to "{{subcategory.name}}", "/subcategories/{{subcategory.id}}"
