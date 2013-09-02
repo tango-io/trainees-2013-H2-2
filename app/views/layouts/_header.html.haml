@@ -23,8 +23,11 @@
         %li
           = link_to 'Log in', new_user_session_path
       - else
+        %li
+          %a{href: '#'}
+            %span.glyphicon.glyphicon-envelope
         %li.btn-group.dropdown
-          %button.btn.btn-default.btn-xs.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+          %button.btn.btn-default.btn-xs.dropdown-toggle#dropdwn{"data-toggle" => "dropdown", :type => "button"}
             = image_tag(current_user.avatar, height: '20', width: '20')
             -#%{current_user.email}
             %span.caret
