@@ -8,6 +8,7 @@ Kickstarter::Application.routes.draw do
     resources :backers
   end
   resources :users
+  resources :messages
   get 'discovers/popular', to: 'discovers#popular'
   get 'discovers/recently',to: 'discovers#recently'
   get 'discovers/endingsoon', to: 'discovers#endingsoon'
