@@ -3,7 +3,7 @@ class Comment < ActiveRecord::Base
   belongs_to :user
 
   scope :show_all, ->(current_user_id) do
-    joins(:project).where(projects: {user_id: current_user_id})
+    joins(:project).where(projects: {user_id: current_user_id}).order("created_at DESC")
   end
 
   scope :approved, ->(project_id) do
