@@ -1,7 +1,6 @@
 /*
- *= require bootstrap.css
+ *= require bootstrap/bootstrap
  *= require_self
  *= require_tree .
  */
 
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
