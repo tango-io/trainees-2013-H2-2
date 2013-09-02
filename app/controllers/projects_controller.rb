@@ -13,7 +13,6 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @pledges = Pledge.where(:project_id => @project.id)
     @faqs    = Faq.where(project_id: [params[:id]])
   end
 
