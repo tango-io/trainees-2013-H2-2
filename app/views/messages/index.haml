@@ -6,6 +6,8 @@
       %li #{message.project.name}
       %li #{message.comment}
       %li #{time_ago_in_words(message.created_at)} ago
+      %li 
+        %input{:type => "hidden", :value => "#{comment.id}", :name => "id"}
       = f.submit 'Approve'
     %hr
    
