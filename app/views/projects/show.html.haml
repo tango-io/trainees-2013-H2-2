@@ -53,7 +53,7 @@
       %br
       %br
       %span
-      - if status(@project.period) != false
+      - if status(@project.period) == true
         %a.btn.btn2.btn-success{:href => new_project_backer_path(@project)}
           %p 
             Back this project
