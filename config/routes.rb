@@ -17,4 +17,6 @@ Kickstarter::Application.routes.draw do
   resources :pages
   resources :subcategories
   resources :categories
+  put 'messages/approve_comment/:id', to: 'messages#approve_comment', as: 'approve_comment'
+  resources :messages
 end

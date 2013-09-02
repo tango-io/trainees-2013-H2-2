@@ -1,0 +1,8 @@
+%h2 Non approved comments 
+-@messages.each do |message| 
+  %ul 
+    %li #{message.user.name} commented on
+    %li #{message.project.name}
+    %li #{message.comment}
+    %li #{time_ago_in_words(message.created_at)} ago
+  = link_to 'Approve', approve_comment_path("#{message.id}"), method: "put"
