@@ -31,7 +31,10 @@ $scope.validate = function(id){
    }
 
  }; 
-
+ 
+ $scope.clean = function(){
+   $("input[name='backer[pledge_id]']").val([]); 
+ };
  
 
 }]);

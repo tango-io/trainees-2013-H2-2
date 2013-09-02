@@ -21,7 +21,7 @@
               %li 
                 = msg
 
-        %input{"ng-model" => "amount", :type => "text", :name => "backer[amount]"}
+        %input{"ng-model" => "text", "ng-change" => "clean()", :type => "text", :name => "backer[amount]"}
         %h3 Select your reward:
         %p#aviable_message 
         %input{"ng-click" => "noreward()", :type => "radio", :name => "backer[pledge_id]", :value => 0}                       
@@ -39,3 +39,4 @@
         =f.hidden_field :project_id, :value => @project.id
         =f.hidden_field :user_id, :value => current_user.id
         =f.submit :value => "Send"
+        =link_to "back", :back
