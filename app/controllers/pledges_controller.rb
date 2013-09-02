@@ -8,6 +8,9 @@ before_action :set_project
 
  def create
    @pledge = @project.pledges.new(pledges_params)
+   date = @pledge.date.split("/")
+   month, day, year = date[0], date[1], date[2]
+   @pledge.date = Date.new(year.to_i, month.to_i, day.to_i)
    @pledge.count = 0
 
    if @pledge.save 
