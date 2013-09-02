@@ -5,7 +5,7 @@ module ApplicationHelper
       minutes = (seconds/60).to_i
       hour = (minutes/60).to_i
       days = (hour/24).to_i
-      if days > 1
+      if days > 2
         "#{days} days"
       else
         if hour > 1

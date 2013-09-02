@@ -65,7 +65,7 @@
         = raw @project.created_at
       %h2 Pledges
       %ul 
-        - @pledges.each do |pledge|
+        - @project.pledges.actives.each do |pledge|
           %li.pledge
             %p.bold 
               Pledge $

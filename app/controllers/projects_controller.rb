@@ -13,7 +13,6 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @pledges = Pledge.where(:project_id => @project.id)
     @faqs    = Faq.where(project_id: [params[:id]])
   end
 
@@ -47,14 +46,15 @@ class ProjectsController < ApplicationController
   def update
     @subcategories = Subcategory.all
     @project = Project.find(params[:id])
+     values = project_params
     if (project_params['video'] =~ /^(https?:\/\/)?(www\.)?youtube.com\/watch\?v=([a-z0-9-]+)/i) 
-      @project.update(:video => format_video(project_params['video']))
-    end  
-    if  @project.update_attributes(project_params)
+      values['video'] = format_video(project_params['video'])
+    end
+    if  @project.update_attributes(values)
       category = Subcategory.find(" #{@project.subcategory_id}")
       category_id = category.category_id
       @project.update(:category_id => category_id)
-      redirect_to show
+      redirect_to @project
     else
       render 'edit'
     end
@@ -66,6 +66,7 @@ private
     video_parts = video.split('=')
     video_format = "//www.youtube.com/embed/" + video_parts[1]
   end
+   
   def project_params
     params.require(:project).permit(:name,:description, :content, :picture, :video, :goal, :period, :subcategory_id, :location, :user_id )
   end

@@ -4,4 +4,6 @@ class Backer < ActiveRecord::Base
 
   validates :amount, :pledge_id, :project_id, :user_id, presence: true
   validates :amount, numericality: true
+
+ 
 end
