@@ -29,13 +29,14 @@
         =f.label "No reward"
         %br
         -@project.pledges.actives.each do |r|
-          %p
-            %input{"ng-click" => "validate(#{r.id})", :type => "radio", :name => "backer[pledge_id]", :value => r.id }
-            %b{"name" => "#{r.id}"}
-              =r.amount
-            %b
-              =r.name
-            =r.description
+          -if r.count != r.stock
+            %p
+              %input{"ng-click" => "validate(#{r.id})", :type => "radio", :name => "backer[pledge_id]", :value => r.id }
+              %b{"name" => "#{r.id}"}
+                =r.amount
+              %b
+                =r.name
+              =r.description
         =f.hidden_field :project_id, :value => @project.id
         =f.hidden_field :user_id, :value => current_user.id
         =f.submit :value => "Send"

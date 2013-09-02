@@ -27,6 +27,6 @@ before_action :set_project
  end
  
  def pledges_params
-  params.require(:pledge).permit(:name, :description, :project_id, :amount, :date) 
+  params.require(:pledge).permit(:name, :description, :project_id, :amount, :date, :stock) 
  end
 end
