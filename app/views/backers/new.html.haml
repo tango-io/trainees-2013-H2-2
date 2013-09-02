@@ -28,7 +28,7 @@
         -#=f.radio_button(:pledge_id, 0) 
         =f.label "No reward"
         %br
-        -@project.pledges.each do |r|
+        -@project.pledges.actives.each do |r|
           %p
             %input{"ng-click" => "validate(#{r.id})", :type => "radio", :name => "backer[pledge_id]", :value => r.id }
             %b{"name" => "#{r.id}"}
