@@ -7,5 +7,8 @@ class Comment < ActiveRecord::Base
   scope :non_approved_comments, ->(current_user_id) do
     joins(:project).where(projects: {user_id: current_user_id}, approved: false)
   end
+  def approve
+    update_attribute(:approved, true)
+  end
 
 end
