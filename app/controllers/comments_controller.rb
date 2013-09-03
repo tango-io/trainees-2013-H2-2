@@ -8,6 +8,11 @@ class CommentsController < ApplicationController
     @comment.save
     redirect_to :back
   end
+  def approve_comment
+    @message = Comment.find(params[:id])
+    @message.approve
+    redirect_to :back
+  end
   private
   def set_project_id
     @project = Project.find(params[:project_id])
