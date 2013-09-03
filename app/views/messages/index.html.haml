@@ -8,14 +8,19 @@
       %a{:href => "#"} Notifications
 
   %ul.comments
-    - @coments.each do |comment|
-      %li.well
-        .col-lg-2
-          = image_tag(comment.user.avatar, class: 'img-responsive')
-        .bubble.col-lg-6
-          %p
-            = comment.user.name
-          %p  
-            = comment.comment
-          %p
-            = comment.created_at.to_date
+    -if @comments != nil
+      - @comments.each do |comment|
+        %li.well
+          .col-lg-2
+            = image_tag(comment.user.avatar, class: 'img-responsive')
+          .bubble.col-lg-6
+            %p
+              = comment.user.name
+            %p  
+              = comment.comment
+            %p
+              = comment.created_at.to_date
+    -else
+      %li
+        %p
+          you have not comments u.u
