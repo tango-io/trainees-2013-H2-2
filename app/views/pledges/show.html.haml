@@ -5,7 +5,9 @@
       %h3 
         Reward selected:
         =@pledge.name
-      %h4 To change your pledge amount, enter a new amount below
+      %h4 
+        To change your pledge amount
+        %a{href: new_project_backer_path} clik here
       =form_for [@project, @backer] do |f|
         %h3 
           Amount:
