@@ -1,4 +1,5 @@
 .well
+
   %ul.nav.nav-tabs
     %li
       %a{:href => "#"} Messages
@@ -20,6 +21,9 @@
               = comment.comment
             %p
               = comment.created_at.to_date
+            %p
+            - if comment.approved == false
+              = link_to 'Approve', approve_comment_message_path(comment.id)
     -else
       %li
         %p
