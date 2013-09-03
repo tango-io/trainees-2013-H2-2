@@ -12,6 +12,9 @@ class BackersController < ApplicationController
  def create 
    @backer = @project.backers.new(backers_params)
    if @backer.save
+     if @backer.pledge_id != 0
+      Pledge.create_pledge(@backer.pledge_id)
+     end
      redirect_to @project
    else
      render "new"
@@ -19,6 +22,8 @@ class BackersController < ApplicationController
  end
 
  private
+
+
  def set_project_id
    @project = Project.find(params[:project_id])
  end
