@@ -1,3 +1,13 @@
-%h1 Hola
-= @pledge.name
-= @pledge.date
+%section.container
+  .wrap-section
+    .content-project.col-lg-8
+      %h2 
+        Reward selected:
+        =@pledge.name
+      %h2 To change your pledge amount, enter a new amount below
+      =form_for [@project, @pledge] do |f|
+        %h3 
+          Amount:
+        =f.text_field :amount, value: @pledge.amount, disabled: true
+        %h3
+

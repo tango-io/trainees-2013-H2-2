@@ -66,8 +66,7 @@
       %h2 Pledges
       %ul 
         - @project.pledges.actives.each do |pledge|
-          %a{:href => "#{@project.id}/pledges/#{pledge.id}" }
-
+          %a{:href => "#{project_pledge_path(@project, pledge)}" }
             %li.pledge
               %p.bold 
                 Pledge $
