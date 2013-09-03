@@ -20,12 +20,16 @@ before_action :set_project
      render "new"
    end
  end
+
+
+
  
  private
  def set_project
    @project = Project.find(params[:project_id])
  end
  
+
  def pledges_params
   params.require(:pledge).permit(:name, :description, :project_id, :amount, :date, :stock) 
  end
