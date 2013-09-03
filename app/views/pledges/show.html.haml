@@ -1,13 +1,17 @@
 %section.container
+%section.container-2.show-project
   .wrap-section
     .content-project.col-lg-8
-      %h2 
+      %h3 
         Reward selected:
         =@pledge.name
-      %h2 To change your pledge amount, enter a new amount below
-      =form_for [@project, @pledge] do |f|
+      %h4 To change your pledge amount, enter a new amount below
+      =form_for [@project, @backer] do |f|
         %h3 
           Amount:
-        =f.text_field :amount, value: @pledge.amount, disabled: true
-        %h3
-
+        =f.text_field :_amount, value: @pledge.amount, disabled: true
+        =f.hidden_field :pledge_id, value: @pledge.id
+        =f.hidden_field :project_id, value: @project.id
+        =f.hidden_field :user_id, value: current_user.id
+        =f.hidden_field :amount, value: @pledge.amount
+        =f.submit value: "Send" 

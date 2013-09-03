@@ -8,6 +8,7 @@ before_action :set_project
 
  def show
    @pledge = @project.pledges.find(params[:id])
+   @backer = Backer.new
  end
 
  def create
