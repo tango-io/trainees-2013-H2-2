@@ -12,7 +12,9 @@ class BackersController < ApplicationController
  def create 
    @backer = @project.backers.new(backers_params)
    if @backer.save
-     Pledge.create_pledge(@backer.pledge_id)
+     if @backer.pledge_id != 0
+      Pledge.create_pledge(@backer.pledge_id)
+     end
      redirect_to @project
    else
      render "new"
