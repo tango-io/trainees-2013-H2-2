@@ -1,0 +1,19 @@
+%section.container
+%section.container-2.show-project
+  .wrap-section
+    .content-project.col-lg-8
+      %h3 
+        Reward selected:
+        =@pledge.name
+      %h4 
+        To change your pledge amount
+        %a{href: new_project_backer_path} clik here
+      =form_for [@project, @backer] do |f|
+        %h3 
+          Amount:
+        =f.text_field :_amount, value: @pledge.amount, disabled: true
+        =f.hidden_field :pledge_id, value: @pledge.id
+        =f.hidden_field :project_id, value: @project.id
+        =f.hidden_field :user_id, value: current_user.id
+        =f.hidden_field :amount, value: @pledge.amount
+        =f.submit value: "Send" 

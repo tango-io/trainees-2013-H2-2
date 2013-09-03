@@ -6,6 +6,11 @@ before_action :set_project
    @pledge = @project.pledges.new
  end
 
+ def show
+   @pledge = @project.pledges.find(params[:id])
+   @backer = Backer.new
+ end
+
  def create
    @pledge = @project.pledges.new(pledges_params)
    date = @pledge.date.split("/")

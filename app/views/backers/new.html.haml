@@ -1,5 +1,5 @@
 %section.container
-  %h3#title
+  %h3#title             
     = raw @project.name
   %h5#small-title
     by
@@ -29,7 +29,7 @@
         =f.label "No reward"
         %br
         -@project.pledges.actives.each do |r|
-          -if r.count != r.stock
+          -if r.count < r.stock
             %p
               %input{"ng-click" => "validate(#{r.id})", :type => "radio", :name => "backer[pledge_id]", :value => r.id }
               %b{"name" => "#{r.id}"}

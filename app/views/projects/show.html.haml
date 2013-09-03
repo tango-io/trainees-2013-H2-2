@@ -66,18 +66,20 @@
       %h2 Pledges
       %ul 
         - @project.pledges.actives.each do |pledge|
-          %li.pledge
-            %p.bold 
-              Pledge $
-              = pledge.amount
-              or more
-            %p.bold 
-              =pledge.count
-              Backers 
+          -if pledge.stock > pledge.count
+            %a{:href => "#{project_pledge_path(@project, pledge)}" }
+              %li.pledge
+                %p.bold 
+                  Pledge $
+                  = pledge.amount
+                  or more
+                %p.bold 
+                  =pledge.count
+                  Backers 
 
-            %p
-              = pledge.description
-            %p
-              Estimated delivery
-              = pledge.date
-              
+                %p
+                  = pledge.description
+                %p
+                  Estimated delivery
+                  = pledge.date
+                  
